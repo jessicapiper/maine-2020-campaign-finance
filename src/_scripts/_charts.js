@@ -2,7 +2,7 @@ var d3 = require("d3");
 
 function totalsChart(el, fieldname) {
 
-var margin = {top: 20, right:20, bottom:20, left:60};
+var margin = {top: 20, right:20, bottom:80, left:60};
 
 var container = d3.select(el);
 
@@ -29,14 +29,23 @@ var yScale = d3.scaleLinear()
               .domain(yDomain)
               .range([chartHeight, 0]);
 
+var formatAxis = d3.format("$.1s");
+
 var xAxis = d3.axisBottom(xScale);
 var yAxis = d3.axisLeft(yScale)
+              .tickFormat(formatAxis)
               .tickSize(-chartWidth)
               .ticks(4);
+
 svg.append("g")
     .attr("class", "x axis")
     .attr("transform", `translate(0,${chartHeight})`)
-    .call(xAxis);
+    .call(xAxis)
+    .selectAll("text")
+        .style("text-anchor", "end")
+        .attr("dx", "-.8em")
+        .attr("dy", ".15em")
+        .attr("transform", "rotate(-65)");
 
 svg.append("g")
     .attr("class", "y axis")
@@ -60,13 +69,14 @@ svg.selectAll('.bar')
       // the - 5 bumps up the text a bit so it's not directly over the bar
       var y = yScale(d[fieldname]) - 5;
       d3.select(this).classed('highlight', true);
-      tooltip.text(d[fieldname])
+      tooltip.text("$".concat(d[fieldname]))
             .attr('transform', `translate(${x}, ${y})`)
     })
     .on('mouseleave', function(d) {
       d3.select(this).classed('highlight', false);
       tooltip.text('');
     });
+
 }
 
 totalsChart("#total-raised", "total_net_contributions")

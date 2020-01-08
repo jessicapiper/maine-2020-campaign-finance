@@ -1,5 +1,15 @@
 [
   {
+    "candidate": "Susan Collins",
+    "reporting period": "Q3",
+    "total_net_contributions": 7950437,
+    "total_spending": 2902647,
+    "cash_on_hand": 7121973,
+    "percent_from_small_donors": 10.3,
+    "percent_from_large_donors": 65.8,
+    "percent_from _PACs": 24
+  },
+  {
     "candidate": "Sara Gideon",
     "reporting period": "Q3",
     "total_net_contributions": 4129918,
@@ -18,16 +28,6 @@
     "percent_from_small_donors": 54.7,
     "percent_from_large_donors": 45.2,
     "percent_from_PACs": 0
-  },
-  {
-    "candidate": "Susan Collins",
-    "reporting period": "Q3",
-    "total_net_contributions": 7950437,
-    "total_spending": 2902647,
-    "cash_on_hand": 7121973,
-    "percent_from_small_donors": 10.3,
-    "percent_from_large_donors": 65.8,
-    "percent_from _PACs": 24
   },
   {
     "candidate": "Bre Kidman",

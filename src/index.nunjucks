@@ -2,24 +2,31 @@
 
 {% import "_modules/link/link.nunjucks" as link %}
 
-{% block headline %}My headline will go here{% endblock %}
+{% block headline %}Breaking down the money in the Maine Senate race{% endblock %}
 
 {% block byline %}By me{% endblock %}
 {% block pubdate %}
-    <time datetime="2019-03-09" pubdate>Mar. 9, 2019</time>
+    <time datetime="2020-01-8" pubdate>Jan. 8, 2020</time>
 {% endblock %}
 {% block content%}
+
+<p>Probably some text introducing this.</p>
 
 <h3>Q3 totals</h3>
 <p>Susan Collins has raised the most of any candidate running for Senate in Maine,
 while Sara Gideon leads her Democratic competitors in the primary.</p>
 <div class="charts">
-  <h4 class="chart-title">Total Raised</h4>
+<div class="row">
   <div class="inline-chart" id="total-raised"></div>
-  <h4 class="chart-title">Total Spent</h4>
   <div class="inline-chart" id="total-spent"></div>
-  <h4 class="chart-title">Cash On Hand</h4>
   <div class="inline-chart" id="cash-on-hand"></div>
+</div>
+</div>
+
+<br>
+<h3>Sources of funding</h3>
+<p>Candidates receive their money from very different sources.</p>
+<div class="charts">
   <div class="inline-chart" id="percent-small-donors"></div>
   <div class="inline-chart" id="percent-large-donors"></div>
   <div class="inline-chart" id="percent-pacs"></div>
