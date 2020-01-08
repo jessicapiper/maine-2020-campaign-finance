@@ -5,8 +5,12 @@
 {% block headline %}My headline will go here{% endblock %}
 
 {% block byline %}By me{% endblock %}
-
 {% block pubdate %}
     <time datetime="2019-03-09" pubdate>Mar. 9, 2019</time>
+{% endblock %}
+{% block content%}
+{%for obj in site.data.senate_data_2%}
+    {{ obj }}<br>
+{% endfor %}
 {% endblock %}
 <code class="version">v2.0.1</code>
