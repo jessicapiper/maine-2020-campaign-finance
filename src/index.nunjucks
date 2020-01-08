@@ -12,33 +12,36 @@
 
 <p>Probably some text introducing this.</p>
 
+<section>
 <h3>Q3 totals</h3>
 <p>Susan Collins has raised the most of any candidate running for Senate in Maine,
 while Sara Gideon leads her Democratic competitors in the primary.</p>
 <div class="charts">
-<div class="row">
-  <div class="inline-chart" id="total-raised"></div>
-  <div class="inline-chart" id="total-spent"></div>
-  <div class="inline-chart" id="cash-on-hand"></div>
+  <div class="inline-chart" id="total-raised">
+  <h4 class="chart-title">Total raised this cycle</h4> </div>
+  <div class="inline-chart" id="total-spent">
+  <h4 class="chart-title">Total spent this cycle</h4> </div>
+  <div class="inline-chart" id="cash-on-hand">
+  <h4 class="chart-title">Cash on hand as of Sep. 30</h4> </div>
 </div>
-</div>
+</section>
 
-<br>
 <h3>Sources of funding</h3>
 <p>Candidates receive their money from very different sources.</p>
 <div class="charts">
-<div class="row">
-  <div class="inline-chart" id="percent-small-donors"></div>
-  <div class="inline-chart" id="percent-large-donors"></div>
-  <div class="inline-chart" id="percent-pacs"></div>
-</div>
+  <div class="inline-chart" id="percent-small-donors">
+  <h4 class="chart-title">Percent from small donors</h4></div>
+  <div class="inline-chart" id="percent-large-donors">
+  <h4 class="chart-title">Percent from large donors</h4></div>
+  <div class="inline-chart" id="percent-pacs">
+  <h4 class="chart-title">Percent from PACS</h4></div>
 </div>
 
 {% endblock %}
 
 {% block scripts %}
 <script>
-var senate_data_3 = {% include '_data/senate_data_3.json' %};
+var senate_data_4 = {% include '_data/senate_data_4.json' %};
 </script>
 {% endblock %}
 <code class="version">v2.0.1</code>

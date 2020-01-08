@@ -33,10 +33,10 @@
     "candidate": "Bre Kidman",
     "reporting period": "Q3",
     "total_net_contributions": 14335.93,
-    "total spending": 8274.52,
-    "cash on hand": 6061.41,
-    "percent from small donors": .195,
-    "percent from large donors": .667,
-    "percent from PACs": 0
+    "total_spending": 8274.52,
+    "cash_on_hand": 6061.41,
+    "percent_from_small_donors": .195,
+    "percent_from_large_donors": .667,
+    "percent_from_PACs": 0
   }
 ]

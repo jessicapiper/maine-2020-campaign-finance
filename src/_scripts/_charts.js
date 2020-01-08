@@ -2,7 +2,7 @@ var d3 = require("d3");
 
 function totalsChart(el, fieldname) {
 
-var margin = {top: 60, right:20, bottom:80, left:60};
+var margin = {top: 20, right:20, bottom:80, left:60};
 
 var container = d3.select(el);
 
@@ -17,8 +17,8 @@ var svg = container.append('svg')
             .attr('height', containerHeight)
             .append('g')
                 .attr('transform', `translate(${margin.left}, ${margin.top})`)
-var xDomain = senate_data_3.map(d => d.candidate);
-var yDomain = [0,d3.max(senate_data_3.map(d => d[fieldname]))+1000000];
+var xDomain = senate_data_4.map(d => d.candidate);
+var yDomain = [0,9000000];
 
 var xScale = d3.scaleBand()
               .domain(xDomain)
@@ -55,7 +55,7 @@ var tooltip = svg.append('text')
     .attr('class', 'chart-tooltip');
 
 svg.selectAll('.bar')
-    .data(senate_data_3)
+    .data(senate_data_4)
     .enter()
     .append('rect')
     .attr('class', 'bar')
@@ -87,7 +87,7 @@ totalsChart("#cash-on-hand", "cash_on_hand")
 
 function percentChart(el, fieldname) {
 
-var margin = {top: 60, right:20, bottom:80, left:60};
+var margin = {top: 20, right:20, bottom:80, left:60};
 
 var container = d3.select(el);
 
@@ -102,7 +102,7 @@ var svg = container.append('svg')
             .attr('height', containerHeight)
             .append('g')
                 .attr('transform', `translate(${margin.left}, ${margin.top})`)
-var xDomain = senate_data_3.map(d => d.candidate);
+var xDomain = senate_data_4.map(d => d.candidate);
 var yDomain = [0,1];
 
 var xScale = d3.scaleBand()
@@ -140,7 +140,7 @@ var tooltip = svg.append('text')
     .attr('class', 'chart-tooltip');
 
 svg.selectAll('.bar')
-    .data(senate_data_3)
+    .data(senate_data_4)
     .enter()
     .append('rect')
     .attr('class', 'bar')

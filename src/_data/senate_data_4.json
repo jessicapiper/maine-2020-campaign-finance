@@ -1,0 +1,46 @@
+[
+  {
+    "candidate": "Susan Collins",
+    "reporting_period": "Q3",
+    "total_net_contributions": 7950437,
+    "total_spending": 2902647,
+    "cash_on_hand": 7121973,
+    "percent_from_small_donors": 0.102730378216946,
+    "percent_from_large_donors": 0.657667874105537,
+    "percent_from_PACs": 0.239759022051241,
+    "party": "R"
+  },
+  {
+    "candidate": "Sara Gideon",
+    "reporting_period": "Q3",
+    "total_net_contributions": 4129918,
+    "total_spending": 1478589,
+    "cash_on_hand": 2757113,
+    "percent_from_small_donors": 0.431538834427221,
+    "percent_from_large_donors": 0.543993851693908,
+    "percent_from_PACs": 0.0244669555182452,
+    "party": "D"
+  },
+  {
+    "candidate": "Betsy Sweet",
+    "reporting_period": "Q3",
+    "total_net_contributions": 183210.5,
+    "total_spending": 95455.67,
+    "cash_on_hand": 87754.83,
+    "percent_from_small_donors": 0.546729581546909,
+    "percent_from_large_donors": 0.452179050873176,
+    "percent_from_PACs": 0,
+    "party": "D"
+  },
+  {
+    "candidate": "Bre Kidman",
+    "reporting_period": "Q3",
+    "total_net_contributions": 14335.93,
+    "total_spending": 8274.52,
+    "cash_on_hand": 6061.41,
+    "percent_from_small_donors": 0.195035829555529,
+    "percent_from_large_donors": 0.666855934703922,
+    "percent_from_PACs": 0,
+    "party": "D"
+  }
+]
