@@ -27,9 +27,11 @@ while Sara Gideon leads her Democratic competitors in the primary.</p>
 <h3>Sources of funding</h3>
 <p>Candidates receive their money from very different sources.</p>
 <div class="charts">
+<div class="row">
   <div class="inline-chart" id="percent-small-donors"></div>
   <div class="inline-chart" id="percent-large-donors"></div>
   <div class="inline-chart" id="percent-pacs"></div>
+</div>
 </div>
 
 {% endblock %}

@@ -5,9 +5,9 @@
     "total_net_contributions": 7950437,
     "total_spending": 2902647,
     "cash_on_hand": 7121973,
-    "percent_from_small_donors": 10.3,
-    "percent_from_large_donors": 65.8,
-    "percent_from _PACs": 24
+    "percent_from_small_donors": .103,
+    "percent_from_large_donors": .658,
+    "percent_from_PACs": .24
   },
   {
     "candidate": "Sara Gideon",
@@ -15,9 +15,9 @@
     "total_net_contributions": 4129918,
     "total_spending": 1478589,
     "cash_on_hand": 2757113,
-    "percent_from_small_donors": 43.2,
-    "percent_from_large_donors": 54.4,
-    "percent_from_PACs": 2.4
+    "percent_from_small_donors": .432,
+    "percent_from_large_donors": .544,
+    "percent_from_PACs": .024
   },
   {
     "candidate": "Betsy Sweet",
@@ -25,8 +25,8 @@
     "total_net_contributions": 183210.5,
     "total_spending": 95455.67,
     "cash_on_hand": 87754.83,
-    "percent_from_small_donors": 54.7,
-    "percent_from_large_donors": 45.2,
+    "percent_from_small_donors": .547,
+    "percent_from_large_donors": .452,
     "percent_from_PACs": 0
   },
   {
@@ -35,8 +35,8 @@
     "total_net_contributions": 14335.93,
     "total spending": 8274.52,
     "cash on hand": 6061.41,
-    "percent from small donors": 19.5,
-    "percent from large donors": 66.7,
+    "percent from small donors": .195,
+    "percent from large donors": .667,
     "percent from PACs": 0
   }
 ]
