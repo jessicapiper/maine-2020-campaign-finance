@@ -1,0 +1,30 @@
+.inline-chart {
+    width: 45%;
+    display: inline-block;
+}
+
+rect {
+  fill: #86C7DF;
+}
+
+.y .domain {
+  display: none;
+}
+
+.x .domain {
+  display: none;
+}
+
+.x .tick line {
+  display: none;
+}
+
+.y .tick:not(:first-of-type) line {
+  stroke: #e7e7e7;
+}
+
+.chart-title {
+  font-weight: bold;
+  font-size: 16px;
+  text-align: center;
+}

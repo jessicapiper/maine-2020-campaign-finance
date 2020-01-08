@@ -9,8 +9,24 @@
     <time datetime="2019-03-09" pubdate>Mar. 9, 2019</time>
 {% endblock %}
 {% block content%}
+
+<h3>Q3 totals</h3>
+<p>Susan Collins has raised the most of any candidate running for Senate in Maine,
+while Sara Gideon leads her Democratic competitors in the primary.</p>
+<div class="charts">
+  <h4 class="chart-title">Total Raised</h4>
+  <div class="inline-chart" id="total-raised"></div>
+  <h4 class="chart-title">Total Spent</h4>
+  <div class="inline-chart" id="total-spent"></div>
+  <h4 class="chart-title">Cash On Hand</h4>
+  <div class="inline-chart" id="cash-on-hand"></div>
+  <div class="inline-chart" id="percent-small-donors"></div>
+  <div class="inline-chart" id="percent-large-donors"></div>
+  <div class="inline-chart" id="percent-pacs"></div>
+</div>
+
 <div class="card-columns">
-{%for obj in site.data.senate_data_2%}
+{%for obj in site.data.senate_data_3%}
   <div class="card">
     <div class="card-body">
       <h5 class="card-title">{{ obj.candidate }} </h5>
@@ -18,5 +34,11 @@
   </div>
 {% endfor %}
 </div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+var senate_data_3 = {% include '_data/senate_data_3.json' %};
+</script>
 {% endblock %}
 <code class="version">v2.0.1</code>
