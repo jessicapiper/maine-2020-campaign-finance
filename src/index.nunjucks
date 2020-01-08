@@ -2,6 +2,8 @@
 
 {% import "_modules/link/link.nunjucks" as link %}
 
+{% block headline %}My headline will go here{% endblock %}
+
 {% block content %}
 <p>Hello World</p>
 {% endblock %}
