@@ -25,15 +25,6 @@ while Sara Gideon leads her Democratic competitors in the primary.</p>
   <div class="inline-chart" id="percent-pacs"></div>
 </div>
 
-<div class="card-columns">
-{%for obj in site.data.senate_data_3%}
-  <div class="card">
-    <div class="card-body">
-      <h5 class="card-title">{{ obj.candidate }} </h5>
-    </div>
-  </div>
-{% endfor %}
-</div>
 {% endblock %}
 
 {% block scripts %}

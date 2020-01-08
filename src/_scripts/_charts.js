@@ -42,6 +42,9 @@ svg.append("g")
     .attr("class", "y axis")
     .call(yAxis);
 
+var tooltip = svg.append('text')
+    .attr('class', 'chart-tooltip');
+
 svg.selectAll('.bar')
     .data(senate_data_3)
     .enter()
@@ -51,6 +54,19 @@ svg.selectAll('.bar')
     .attr('y', d => yScale(d[fieldname]))
     .attr('width', xScale.bandwidth())
     .attr('height', d => chartHeight - yScale(d[fieldname]))
+    .on('mouseenter', function(d) {
+      // centers the text above each bar
+      var x = xScale(d.candidate) + xScale.bandwidth() / 2;
+      // the - 5 bumps up the text a bit so it's not directly over the bar
+      var y = yScale(d[fieldname]) - 5;
+      d3.select(this).classed('highlight', true);
+      tooltip.text(d[fieldname])
+            .attr('transform', `translate(${x}, ${y})`)
+    })
+    .on('mouseleave', function(d) {
+      d3.select(this).classed('highlight', false);
+      tooltip.text('');
+    });
 }
 
 totalsChart("#total-raised", "total_net_contributions")
