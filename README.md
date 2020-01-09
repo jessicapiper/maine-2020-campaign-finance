@@ -5,8 +5,7 @@ Generated on 2020-01-08 using
 
 ## Description
 
-This is an example readme file.
-Describe your site/app here.
+This project visualizes campaign finance trends among Maine politicians.
 
 ## Technologies used
 
