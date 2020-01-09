@@ -2,7 +2,7 @@ var d3 = require("d3");
 
 function totalsChart(el, fieldname) {
 
-var margin = {top: 20, right:20, bottom:80, left:60};
+var margin = {top: 10, right:20, bottom:80, left:60};
 
 var container = d3.select(el);
 
@@ -70,7 +70,7 @@ svg.selectAll('.bar')
       var y = yScale(d[fieldname]) - 5;
       d3.select(this).classed('highlight', true);
       tooltip.text(d3.format("$,.0f")(d[fieldname]))
-            .attr('transform', `translate(${x}, ${y})`)
+            .attr('transform',`translate(${x + 8}, ${y - 4}) rotate (-10)`)
     })
     .on('mouseleave', function(d) {
       d3.select(this).classed('highlight', false);

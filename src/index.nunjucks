@@ -23,6 +23,7 @@ while Sara Gideon leads her Democratic competitors in the primary.</p>
   <h4 class="chart-title">Total spent this cycle</h4> </div>
   <div class="inline-chart" id="cash-on-hand">
   <h4 class="chart-title">Cash on hand as of Sep. 30</h4> </div>
+  <p style="text-align:right">Source: BDN analysis of FEC data</p>
 </div>
 </section>
 
@@ -35,6 +36,9 @@ while Sara Gideon leads her Democratic competitors in the primary.</p>
   <h4 class="chart-title">Percent from large donors</h4></div>
   <div class="inline-chart" id="percent-pacs">
   <h4 class="chart-title">Percent from PACS</h4></div>
+  <p style="text-align:left">*Note: Percentages might not add to 100% because of
+  rounding and candidate self-funding.</p>
+  <p style="text-align:right">Source: BDN analysis of FEC data</p>
 </div>
 
 {% endblock %}
