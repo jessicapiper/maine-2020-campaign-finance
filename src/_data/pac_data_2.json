@@ -1,0 +1,27 @@
+[
+  {
+    "type": "Business",
+    "Collins": 0.7502,
+    "Gideon": 0
+  },
+  {
+    "type": "Ideological",
+    "Collins": 0.454,
+    "Gideon": 0.3468
+  },
+  {
+    "type": "Labor",
+    "Collins": 0.234,
+    "Gideon": 0.090
+  },
+  {
+    "type": "Leadership",
+    "Collins": 0.1746,
+    "Gideon": 0.5542
+  },
+  {
+    "type": "Other",
+    "Collins": 0.0055,
+    "Gideon": 0
+  }
+]

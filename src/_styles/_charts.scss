@@ -6,6 +6,18 @@
     display: inline-block;
 }
 
+rect {
+  fill: #006600;
+}
+
+.percent-chart{
+  width: 40%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  display: inline-block;
+}
+
 .y .domain {
   display: none;
 }
@@ -29,7 +41,7 @@
 }
 
 .highlight {
-  fill: #9C7272;
+  fill: #a6a6a6;
 }
 
 .chart-tooltip {
