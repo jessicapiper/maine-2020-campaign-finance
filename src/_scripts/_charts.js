@@ -190,8 +190,25 @@ var yDomain = pac_data.map(d => d.type);
 
 var pacData = pac_data
 
+var xScale = d3.scaleBand()
+              .domain(xDomain)
+              .range([0, chartWidth])
+              .padding(0.1);
 
+var yScale = d3.scaleLinear()
+              .domain(yDomain)
+              .range([chartHeight, 0]);
 
+var xAxis = d3.axisBottom(xScale);
+var yAxis = d3.axisLeft(yScale)
+
+svg.append("g")
+    .attr("class", "x axis")
+    .call(xAxis);
+
+svg.append("g")
+    .attr("class", "y axis")
+    .call(yAxis);
 }
 
 pacChart("#all-candidates-pacs")
