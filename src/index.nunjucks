@@ -53,6 +53,7 @@ while Sara Gideon leads her Democratic competitors in the primary.</p>
 var senate_data_4 = {% include '_data/senate_data_4.json' %};
 var pac_data_3 = {% include '_data/pac_data_3.json' %}
 var pac_data_4 = {% include '_data/test.csv' %}
+var collins-pacs = {% include '_data/collins-pacs.json'}
 
 </script>
 {% endblock %}

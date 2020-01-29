@@ -192,8 +192,8 @@ var raw_data = [{type:"ideological",number:0.7501615252},{type:"leadership",numb
 var data = d3.pie().sort(null).value(function(d){return d.number;})(raw_data);
 
 var segments = d3.arc()
-  .innerRadius(2)
-  .outerRadius(90)
+  .innerRadius(0)
+  .outerRadius(80)
   .padAngle(.05)
   .padRadius(50)
 
@@ -206,7 +206,7 @@ var content = d3.select("g").selectAll("text").data(data);
 content.enter().append("text").each(function(d){
   var center = segments.centroid(d);
   d3.select(this).attr("x", center[0]).attr("y",center[1])
-                  .text(d.data.type)
+                  .text(d.data.number)
   })
 }
 
