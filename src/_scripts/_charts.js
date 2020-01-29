@@ -168,4 +168,32 @@ percentChart("#percent-small-donors", "percent_from_small_donors")
 percentChart("#percent-large-donors", "percent_from_large_donors")
 percentChart("#percent-pacs", "percent_from_PACs")
 
+function pacChart(el){
+
+var margin = {top: 10, right:20, bottom:80, left:60};
+
+var container = d3.select(el);
+
+var containerWidth = container.node().offsetWidth;
+var containerHeight = containerWidth;
+
+var chartWidth = containerWidth - margin.right - margin.left;
+var chartHeight = containerHeight - margin.top - margin.bottom;
+
+var svg = container.append('svg')
+            .attr('width', containerWidth)
+            .attr('height', containerHeight)
+            .append('g')
+              .attr('transform', `translate(${margin.left}, ${margin.top})`)
+var xDomain = [0,1]
+var yDomain = pac_data.map(d => d.type);
+
+var pacData = pac_data
+
+
+
+}
+
+pacChart("#all-candidates-pacs")
+
 console.log('hello, this is my charts file!');

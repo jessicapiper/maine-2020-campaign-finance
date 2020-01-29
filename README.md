@@ -55,4 +55,6 @@ The tasks are as follows:
 `gulp test`: Lints all `*.js` file in the `source` folder using eslint and runs all `*.test.js` file unit tests through [Karma](http://karma-runner.github.io/0.13/index.html) and Jasmine
 `gulp test --watch`: Same as `gulp test` but will constantly watch `*.test.js` files and rerun tests when changes are detected
 
-***Adding the `--debug` option to any gulp task displays extra debugging information (ex. data being loaded into your templates)***
+## Acknowledgements
+
+Credit to Dana Amihere, Armand Emamdjomeh and Ben Welsh of Investigative Reporters and Editors who put together this handy d3 intro: https://www.firstgraphics.app/. 
