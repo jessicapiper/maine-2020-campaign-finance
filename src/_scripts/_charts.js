@@ -215,28 +215,20 @@ pacChart("#collins-pacs",)
 /*    .domain(xDomain)
     .range([0, chartWidth])
     .padding(0.1);
-
 var yScale = d3.scaleLinear()
     .domain(yDomain)
     .range([chartHeight, 0]);
-
 var xAxis = d3.axisBottom(xScale);
 var yAxis = d3.axisLeft(yScale)
-
 var headers = ["ideological","labor","leadership","business","other"]
-
 var layers = d3.layout.stack()(headers.map(function(pac_data)))
 */
 /*var xDomain = [0,1]
 var yDomain = pac_data.map(d => d.type);
-
 var pacData = pac_data
-
-
 svg.append("g")
     .attr("class", "x axis")
     .call(xAxis);
-
 svg.append("g")
     .attr("class", "y axis")
     .call(yAxis);
