@@ -267,6 +267,13 @@ var color = d3.scaleOrdinal()
 
 //console.log(color);
 
+
+var myTool = d3.select("body")
+                  .append("div")
+                  .attr("class", "mytooltip")
+                  .style("opacity", "0")
+                  .style("display", "none");
+
 svg.append("g")
   .selectAll("g")
   .data(series)
@@ -280,16 +287,15 @@ svg.append("g")
     .attr("width", d => xScale(d[1]-d[0]))
     .attr("height",yScale.bandwidth()-20)
   .on('mouseenter', function(d) {
-      var x = d3.mouse(this)[0];
-      var y = yScale(d.type) - 5;
+      var xPosition = d3.mouse(this)[0] - 15;//d3.mouse(this)[0];
+      var yPosition = yScale(d.type) + yScale.bandwidth()/2;//d3.mouse(this)[1] + 25;//d3.mouse(this[1]);
       //var yPosition = d3.mouse(this)[1] + 50;
       d3.select(this).classed('highlight', true);
-      tooltip.text("testing")
-        //.attr('transform', `translate(${x}, ${y})`)
-        //.attr("position","absolute")
-        //.attr("background","pink")
-        //.attr('transform', `translate(${d3.mouse(this)[0]}, ${yScale(d.data.type)})`)
-        //.style("top")
+        .attr("x",function(d) {return xPosition;})
+        .attr("y",functino(d) {return yPosition;})
+        myTool.html("testing")
+      //tooltip.select("text").text("testing")
+      //  .attr('transform', `translate(${xPosition}, ${yPosition})`)
       //tooltip.text(d.key + " : " + d3.format(".0%")(xScale(d[1]-d[0])))// ": " + d3.format(".0%")(d[1]-d[0]))
       /*tooltip.text(d3.format(".0%")xScale(d[1]-d[0]))
             .attr('transform', `translate(${xPosition}, ${yPosition})`)*/
@@ -298,6 +304,19 @@ svg.append("g")
       d3.select(this).classed('highlight', false);
       tooltip.text('');
     });
+
+/*var text = svg.selectAll("text")
+  .data(function(d){
+    return d;
+  })
+  .enter()
+  .append("text")
+    .attr("class","text")
+    .attr("x",function(d){
+      return xScale(d.y0);
+    })
+    .attr("y",70)
+    .text(function(d){return d.x;})*/
 
 var legend = svg.append("g")
   .attr("width",series.length * 36)
