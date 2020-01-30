@@ -54,6 +54,12 @@ svg.append("g")
 var tooltip = svg.append('text')
     .attr('class', 'chart-tooltip');
 
+var colors = d3.scaleLinear()
+  .domain(["R","D","G"])
+  .range("red","blue","green");
+
+console.log(colors)
+
 svg.selectAll('.bar')
     .data(senate_data_4)
     .enter()
@@ -63,6 +69,23 @@ svg.selectAll('.bar')
     .attr('y', d => yScale(d[fieldname]))
     .attr('width', xScale.bandwidth())
     .attr('height', d => chartHeight - yScale(d[fieldname]))
+    .attr('fill',function(d){
+      return "green";
+    })
+    /*.attr("fill", function(d){
+      //return colors(d.party);
+      //console.log(d3.select(this))
+      //d3.select(this.parentNode)
+      //var parentData = d3.select(this.parentNode).pacData()[0];
+      //console.log(parentData)
+      if(d.party = "D"){
+        return "#003F92"
+      }else if (d.party = "R") {
+        return "#B90C0C"
+      }else {
+        return "green";
+      }
+    })*/
     .on('mouseenter', function(d) {
       // centers the text above each bar
       var x = xScale(d.candidate) + xScale.bandwidth() / 2;
@@ -148,6 +171,9 @@ svg.selectAll('.bar')
     .attr('y', d => yScale(d[fieldname]))
     .attr('width', xScale.bandwidth())
     .attr('height', d => chartHeight - yScale(d[fieldname]))
+    .attr('fill',function(d){
+      return "green";
+    })
     .on('mouseenter', function(d) {
       // centers the text above each bar
       var x = xScale(d.candidate) + xScale.bandwidth() / 2;
@@ -223,18 +249,121 @@ svg.append("g")
 var tooltip = svg.append('text')
     .attr('class', 'chart-tooltip');
 
-/*pac_keys = ["ideological","labor","leadership","business","other"]
-series = d3.stack()
-  .keys(pac_keys)*/
+var keys = ["ideological","labor","leadership","business","other"]
 
-svg.selectAll('.bar')
+var series = d3.stack().keys(keys)(pac_data)
+
+console.log(series);
+
+var color = d3.scaleOrdinal()
+  .domain(keys)
+  //.range(d3.schemeDark2)
+  .range(d3.quantize(t => d3.interpolateSpectral(t * 0.8 + 0.1), series.length).reverse())
+  .unknown("#ccc")
+
+//console.log(color);
+
+svg.append("g")
+  .selectAll("g")
+  .data(series)
+  .enter().append("g")
+    .attr("fill", d => color(d.key))
+  .selectAll("rect")
+  .data(d => d)
+  .join("rect")
+    .attr("x", d => xScale(d[0]))//d => x(d[0]))
+    .attr("y", d => yScale(d.data.type)+40)
+    .attr("width", d => xScale(d[1]-d[0]))
+    .attr("height",yScale.bandwidth()-40)
+  .on('mouseenter', function(d) {
+      var xPosition = d3.mouse(this)[0];
+      var yPosition = d3.mouse(this)[1] - 50;
+      d3.select(this).classed('highlight', true);
+      //tooltip.text(d.key + " : " + d3.format(".0%")(xScale(d[1]-d[0])))// ": " + d3.format(".0%")(d[1]-d[0]))
+      tooltip.text(d3.format(".0%")xScale(d[1]-d[0]))
+            .attr('transform', `translate(${xPosition}, ${yPosition})`)
+    })
+    .on('mouseleave', function(d) {
+      d3.select(this).classed('highlight', false);
+      tooltip.text('');
+    });
+/*
+{
+  // centers the text above each bar
+  var x = xScale(d.candidate) + xScale.bandwidth() / 2;
+  // the - 5 bumps up the text a bit so it's not directly over the bar
+  var y = yScale(d[fieldname]) - 5;
+  d3.select(this).classed('highlight', true);
+  tooltip.text(d3.format("$,.0f")(d[fieldname]))
+        .attr('transform',`translate(${x + 8}, ${y - 4}) rotate (-10)`)
+})
+*/
+
+var legend = svg.append("g")
+  .attr("width",series.length * 36)
+  .attr("height",40)
+  .attr("font-family", "helvetica")
+  .attr("font-size", 12)
+  //.style("margin-left", `${margin.left}px`)
+  .attr("text-anchor", "left")
+  .style("display", "block")
+  .selectAll("g")
+  .data(series)//(keys)
+  .join("g")
+    .attr("transform", (d, i) => `translate(${i * 100},0)`);
+
+legend.append("rect")
+      .attr("x", 0)
+      .attr("y",0)
+      .attr("width", 36)
+      .attr("height", 25)
+      .attr("fill", d => color(d.key));
+
+legend.append("text")
+  .attr("x", 0)
+  .attr("y",32)
+  .attr("dy", "0.35em")
+  .text(d => d.key);
+
+/*var pac_keys = ["ideological","labor","leadership","business","other"]
+series = d3.stack()
+  .keys(pac_keys)
+
+  var x = xScale(d.candidate) + xScale.bandwidth() / 2;
+  // the - 5 bumps up the text a bit so it's not directly over the bar
+  var y = yScale(d[fieldname]) - 5;
+var colors = d3.scaleOrdinal(d3.schemeDark2);
+  .domain(series.map(d => d.key))
+  .range(d3.quantize(t => d3.interpolateSpectral(t * 0.8 + 0.1), series.length).reverse())
+  .unknown("#ccc")*/
+
+/*svg.selectAll('.bar')
+    .data(stackedData)
+    .enter().append("g")
+      .attr("fill", function(d){ return color(d.key);})
+      .attr("class", function(d){ return "myRect " + d.key }) // Add a class to each subgroup: their name
+      .selectAll("rect")
+      .data(function(d) {return d;})
+      .enter().append("rect")
+      .attr("y",function(d){return y(d.data.type)})
+      .attr("x", function(d) {return x(d[1]);})
+      .attr("height",yScale.bandwith())
+      .attr("width", function(d) {return x(d[0] - x(d[1]));})*/
+
+    /*.attr("x", 0)
+    .attr("y", d => yScale(d.type))
+    .attr("width",d => xScale(d.ideological))
+    .attr("height",yScale.bandwidth())*/
+
+//working unstacked bars
+/*svg.selectAll('.bar')
     .data(pac_data)
     .enter().append("rect")
     .attr("x", 0)
     .attr("y", d => yScale(d.type))
     .attr("width",d => xScale(d.ideological))
     .attr("height",yScale.bandwidth())
-    .on('mouseenter', function(d) {
+    /*.on('mouseenter', function(d) {
       // centers the text above each bar
       var y = yScale(d.type) + yScale.bandwidth() / 2;
       // the - 5 bumps up the text a bit  so it's not directly over the bar
@@ -246,7 +375,7 @@ svg.selectAll('.bar')
     .on('mouseleave', function(d) {
       d3.select(this).classed('highlight', false);
       tooltip.text('');
-    });
+    });*/
 
 }
 /*

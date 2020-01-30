@@ -42,8 +42,9 @@ while Sara Gideon leads her Democratic competitors in the primary.</p>
 </div>
 
 <h3>About those pacs </h3>
+<p>Not all PACs are the same.</p>
 <div class="charts">
-  <h4 class="chart-title">Title goes here</h4></div>
+  <h4 class="chart-title">Share of different types of PAC money received by each candidate</h4></div>
   <div class="long-chart" id="all-pacs"></div>
 </div>
 {% endblock %}
