@@ -196,7 +196,7 @@ percentChart("#percent-pacs", "percent_from_PACs")
 
 function pacChart(el) {
 
-var margin = {top: 20, right:20, bottom:80, left:80};
+var margin = {top: 20, right:20, bottom:70, left:80};
 
 var container = d3.select(el);
 
@@ -216,7 +216,7 @@ var xDomain = [0,1];
 
 var yScale = d3.scaleBand()
               .domain(yDomain)
-              .range([0, chartHeight])
+              .range([0, chartHeight - 20])
               .padding(0.1);
 
 var xScale = d3.scaleLinear()
@@ -244,10 +244,14 @@ svg.append("g")
 
 svg.append("g")
     .attr("class", "y axis")
+    .attr("transform", `translate(0,30)`)
     .call(yAxis);
 
 var tooltip = svg.append('text')
-    .attr('class', 'chart-tooltip');
+    .attr('class', 'chart-tooltip')
+    .style("position","absolute")
+    .style("visibility","hidden")
+    .style("background", "#000");
 
 var keys = ["ideological","labor","leadership","business","other"]
 
@@ -274,14 +278,20 @@ svg.append("g")
     .attr("x", d => xScale(d[0]))//d => x(d[0]))
     .attr("y", d => yScale(d.data.type)+40)
     .attr("width", d => xScale(d[1]-d[0]))
-    .attr("height",yScale.bandwidth()-40)
+    .attr("height",yScale.bandwidth()-20)
   .on('mouseenter', function(d) {
-      var xPosition = d3.mouse(this)[0];
-      var yPosition = d3.mouse(this)[1] - 50;
+      //var x = d3.mouse(this)[0];
+      //var y = yScale(d.type) - 5;
+      //var yPosition = d3.mouse(this)[1] + 50;
       d3.select(this).classed('highlight', true);
+      tooltip.text("test: " + d.data.key)
+        //.attr("position","absolute")
+        //.attr("background","pink")
+        .attr('transform', `translate(${d3.mouse(this)[0]}, ${yScale(d.data.type)-20})`)
+        .style("top")
       //tooltip.text(d.key + " : " + d3.format(".0%")(xScale(d[1]-d[0])))// ": " + d3.format(".0%")(d[1]-d[0]))
-      tooltip.text(d3.format(".0%")xScale(d[1]-d[0]))
-            .attr('transform', `translate(${xPosition}, ${yPosition})`)
+      /*tooltip.text(d3.format(".0%")xScale(d[1]-d[0]))
+            .attr('transform', `translate(${xPosition}, ${yPosition})`)*/
     })
     .on('mouseleave', function(d) {
       d3.select(this).classed('highlight', false);
@@ -471,7 +481,6 @@ svg.selectAll('allSlices')
     .attr("fill","#66ff33")*/
 
 //})
-
 
 pacChart("#all-pacs")
 //pacChart("#gideon-pacs","gideon_pacs.json")
