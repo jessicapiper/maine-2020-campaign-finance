@@ -190,7 +190,7 @@ var xDomain = [0,1];
 
 var yScale = d3.scaleBand()
               .domain(yDomain)
-              .range([chartHeight, 0])
+              .range([0, chartHeight])
               .padding(0.1);
 
 var xScale = d3.scaleLinear()
@@ -229,26 +229,24 @@ series = d3.stack()
 
 svg.selectAll('.bar')
     .data(pac_data)
-    .enter()
-    .append('rect')
-    .attr('class', 'bar')
-    .attr('x', x(0))
-    .attr('y', d => yScale(d.type))
-    .attr('width', d => xScale(d.ideological))
-    .attr('height', yScale.bandwith())
-    /*.on('mouseenter', function(d) {
+    .enter().append("rect")
+    .attr("x", 0)
+    .attr("y", d => yScale(d.type))
+    .attr("width",d => xScale(d.ideological))
+    .attr("height",yScale.bandwidth())
+    .on('mouseenter', function(d) {
       // centers the text above each bar
       var y = yScale(d.type) + yScale.bandwidth() / 2;
       // the - 5 bumps up the text a bit  so it's not directly over the bar
-      var x = xScale(d.ideological) - 5;
+      var x = xScale(d.ideological) + 45;
       d3.select(this).classed('highlight', true);
-      tooltip.text(d3.format(".0%")(d.ideological))
+      tooltip.text("ideological: " + d3.format(".0%")(d.ideological))
             .attr('transform', `translate(${x}, ${y})`)
     })
     .on('mouseleave', function(d) {
       d3.select(this).classed('highlight', false);
       tooltip.text('');
-    });*/
+    });
 
 }
 /*
