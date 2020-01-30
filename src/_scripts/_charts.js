@@ -253,7 +253,7 @@ var tooltip = svg.append('text')
     .style("visibility","hidden")
     .style("background", "#000");
 
-var keys = ["ideological","labor","leadership","business","other"]
+var keys = ["ideological","leadership","labor","business","other"]
 
 var series = d3.stack().keys(keys)(pac_data)
 
@@ -280,15 +280,16 @@ svg.append("g")
     .attr("width", d => xScale(d[1]-d[0]))
     .attr("height",yScale.bandwidth()-20)
   .on('mouseenter', function(d) {
-      //var x = d3.mouse(this)[0];
-      //var y = yScale(d.type) - 5;
+      var x = d3.mouse(this)[0];
+      var y = yScale(d.type) - 5;
       //var yPosition = d3.mouse(this)[1] + 50;
       d3.select(this).classed('highlight', true);
-      tooltip.text("test: " + d.data.key)
+      tooltip.text("testing")
+        //.attr('transform', `translate(${x}, ${y})`)
         //.attr("position","absolute")
         //.attr("background","pink")
-        .attr('transform', `translate(${d3.mouse(this)[0]}, ${yScale(d.data.type)-20})`)
-        .style("top")
+        //.attr('transform', `translate(${d3.mouse(this)[0]}, ${yScale(d.data.type)})`)
+        //.style("top")
       //tooltip.text(d.key + " : " + d3.format(".0%")(xScale(d[1]-d[0])))// ": " + d3.format(".0%")(d[1]-d[0]))
       /*tooltip.text(d3.format(".0%")xScale(d[1]-d[0]))
             .attr('transform', `translate(${xPosition}, ${yPosition})`)*/

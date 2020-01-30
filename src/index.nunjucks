@@ -42,7 +42,14 @@ while Sara Gideon leads her Democratic competitors in the primary.</p>
 </div>
 
 <h3>About those pacs </h3>
-<p>Not all PACs are the same.</p>
+<p>PACs work to advance a variety of different interests. There are four main kinds:
+Ideological PACs work to advance a particular issue or set of issues. PACs in this
+cateogory include Emily's List, which works to elect female candidates, and No Labels,
+which aims to reduce partisanship. Leadership PACs are associated with a particular
+politician. Many members of Congress have these PACs, which they use to support other
+candidates. Labor PACs work to advance the interests of labor unions, and are often
+funded by union members. Business PACs, sometimes referred to as corporate PACs, generally
+work to advance the interests of the businesses or corporate groups that they represent.</p>
 <div class="charts">
   <h4 class="chart-title">Share of different types of PAC money received by each candidate</h4></div>
   <div class="long-chart" id="all-pacs"></div>

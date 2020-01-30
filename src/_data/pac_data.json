@@ -2,16 +2,16 @@
   {
     "type": "Susan Collins",
     "ideological": 0.1746258125,
-    "labor": 0.04543844031,
     "leadership": 0.02431561469,
+    "labor": 0.04543844031,
     "business": 0.7501615252,
     "other": 0.00545860738
   },
   {
     "type": "Sara Gideon",
     "ideological": 0.3468418318,
-    "labor": 0.09896335882,
     "leadership": 0.5541948094,
+    "labor": 0.09896335882,
     "business": 0,
     "other": 0
   }
