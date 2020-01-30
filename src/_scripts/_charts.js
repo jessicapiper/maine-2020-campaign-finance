@@ -18,7 +18,7 @@ var svg = container.append('svg')
             .append('g')
                 .attr('transform', `translate(${margin.left}, ${margin.top})`)
 var xDomain = senate_data_4.map(d => d.candidate);
-var yDomain = [0,14000000];
+var yDomain = [0,d3.max(senate_data_4.map(d => d.total_net_contributions))+1000000];
 
 var xScale = d3.scaleBand()
               .domain(xDomain)
