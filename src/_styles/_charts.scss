@@ -1,18 +1,13 @@
 .inline-chart {
     width: 32%;
-    display: flex;
-    align-items: margin-right;
-    justify-content: center;
     display: inline-block;
 }
 
-.long-chart {
-    width: 90%;
-    display: flex;
-    align-items: margin-left;
-    justify-content: left;
-    display: inline-block;
+.long-chart{
+  width: 95%;
+  display: inline-block;
 }
+
 
 rect {
   fill: #006600;
