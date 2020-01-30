@@ -70,7 +70,7 @@ svg.selectAll('.bar')
     .attr('width', xScale.bandwidth())
     .attr('height', d => chartHeight - yScale(d[fieldname]))
     .attr('fill',function(d){
-      return "green";
+      return "#006600";
     })
     /*.attr("fill", function(d){
       //return colors(d.party);
@@ -172,7 +172,7 @@ svg.selectAll('.bar')
     .attr('width', xScale.bandwidth())
     .attr('height', d => chartHeight - yScale(d[fieldname]))
     .attr('fill',function(d){
-      return "green";
+      return "#006600";
     })
     .on('mouseenter', function(d) {
       // centers the text above each bar
@@ -297,17 +297,6 @@ svg.append("g")
       d3.select(this).classed('highlight', false);
       tooltip.text('');
     });
-/*
-{
-  // centers the text above each bar
-  var x = xScale(d.candidate) + xScale.bandwidth() / 2;
-  // the - 5 bumps up the text a bit so it's not directly over the bar
-  var y = yScale(d[fieldname]) - 5;
-  d3.select(this).classed('highlight', true);
-  tooltip.text(d3.format("$,.0f")(d[fieldname]))
-        .attr('transform',`translate(${x + 8}, ${y - 4}) rotate (-10)`)
-})
-*/
 
 var legend = svg.append("g")
   .attr("width",series.length * 36)
@@ -335,152 +324,7 @@ legend.append("text")
   .attr("dy", "0.35em")
   .text(d => d.key);
 
-/*var pac_keys = ["ideological","labor","leadership","business","other"]
-series = d3.stack()
-  .keys(pac_keys)
-
-  var x = xScale(d.candidate) + xScale.bandwidth() / 2;
-  // the - 5 bumps up the text a bit so it's not directly over the bar
-  var y = yScale(d[fieldname]) - 5;
-var colors = d3.scaleOrdinal(d3.schemeDark2);
-  .domain(series.map(d => d.key))
-  .range(d3.quantize(t => d3.interpolateSpectral(t * 0.8 + 0.1), series.length).reverse())
-  .unknown("#ccc")*/
-
-/*svg.selectAll('.bar')
-    .data(stackedData)
-    .enter().append("g")
-      .attr("fill", function(d){ return color(d.key);})
-      .attr("class", function(d){ return "myRect " + d.key }) // Add a class to each subgroup: their name
-      .selectAll("rect")
-      .data(function(d) {return d;})
-      .enter().append("rect")
-      .attr("y",function(d){return y(d.data.type)})
-      .attr("x", function(d) {return x(d[1]);})
-      .attr("height",yScale.bandwith())
-      .attr("width", function(d) {return x(d[0] - x(d[1]));})*/
-
-    /*.attr("x", 0)
-    .attr("y", d => yScale(d.type))
-    .attr("width",d => xScale(d.ideological))
-    .attr("height",yScale.bandwidth())*/
-
-//working unstacked bars
-/*svg.selectAll('.bar')
-    .data(pac_data)
-    .enter().append("rect")
-    .attr("x", 0)
-    .attr("y", d => yScale(d.type))
-    .attr("width",d => xScale(d.ideological))
-    .attr("height",yScale.bandwidth())
-    /*.on('mouseenter', function(d) {
-      // centers the text above each bar
-      var y = yScale(d.type) + yScale.bandwidth() / 2;
-      // the - 5 bumps up the text a bit  so it's not directly over the bar
-      var x = xScale(d.ideological) + 45;
-      d3.select(this).classed('highlight', true);
-      tooltip.text("ideological: " + d3.format(".0%")(d.ideological))
-            .attr('transform', `translate(${x}, ${y})`)
-    })
-    .on('mouseleave', function(d) {
-      d3.select(this).classed('highlight', false);
-      tooltip.text('');
-    });*/
-
 }
-/*
-z.domain(keys)
-
-svg.append("g")
-  .selectAll("g")
-  .data(d3.stack().keys(keys)(pac_data))
-  .enter().append("g")
-    .attr("fill",function(d){return z(d.key);})
-  .select("rect")
-  .data(function(d){return d;})
-  .enter().append("rect")
-    .attr("y",function(d) {return y(d.type)})
-    .attr("x",function(d) {return x(d[0]);})
-    .attr("width", function(d){ return x(d[1] - x(d[0]);)})
-    .attr("height",y.bandwith())
-/*
-var tooltip = svg.append('text')
-    .attr('class', 'chart-tooltip');
-
-svg.selectAll('.bar')
-    .data(collins_pacs)
-    .enter()
-    .append('rect')
-    .attr('class', 'bar')
-    .attr('x', d => xScale(d.type))
-    .attr('y', d => yScale(d.value))
-    .attr('width', xScale.bandwidth())
-    .attr('height', d => chartHeight - yScale(d.value))
-    .on('mouseenter', function(d) {
-      // centers the text above each bar
-      var x = xScale(d.candidate) + xScale.bandwidth() / 2;
-      // the - 5 bumps up the text a bit so it's not directly over the bar
-      var y = yScale(d.value) - 5;
-      d3.select(this).classed('highlight', true);
-      tooltip.text(d3.format(".0%")(d.value))
-            .attr('transform', `translate(${x}, ${y})`)
-    })
-    .on('mouseleave', function(d) {
-      d3.select(this).classed('highlight', false);
-      tooltip.text('');
-    });
-*/
-
-//var raw_data = d3.JSON.parse(await FileAttachment(filename).text(), d3.autoType)
-//var raw_data = [{type:"ideological",number:0.7501615252},{type:"leadership",number:0.02431561469},{type:"business", number:0.1746258125},{type:"other",number:0.00545860738},{type:"labor",number:0.04543844031}];
-//var data = d3.pie().sort(null).value(function(d){return d.number;})(raw_data);
-/*
-var radius = 50 //Math.min(chartWidth,chartHeight)/3.1
-
-var pie = d3.pie().value(function(d) {
-    return d.value;
-});
-
-var path = d3.arc()
-    .outerRadius(radius - 10)
-    .innerRadius(0);
-
-var label = d3.arc()
-    .outerRadius(radius)
-    .innerRadius(radius - 80);*/
-
-/*d3.json("gideon_pacs.json",function(error, data){
-  if(error){
-    throw error;
-  }*/
-
-/*var segments = d3.arc()
-    .innerRadius(2)
-    .outerRadius(90)
-    .padAngle(.05)
-    .padRadius(50)
-
-var sections = svg.append("g").attr("transform","translate(20,20)")
-    .selectAll("path").data(data);
-
-sections.enter().append("path").attr("d",segments).attr("fill",function(d){return colors(d.data.number);})
-
-svg.selectAll('allSlices')
-  .on('mouseleave', function(d) {
-    d3.select(this).classed('highlight', false);
-    tooltip.text('');
-  });*/
-
-  /*var arc = g.selectAll(".arc")
-    .data(pie(data))
-    .enter(.append("g"))
-    .attr("class","arc")
-
-  arc.append("path")
-    .attr("d", path)
-    .attr("fill","#66ff33")*/
-
-//})
 
 pacChart("#all-pacs")
 //pacChart("#gideon-pacs","gideon_pacs.json")
