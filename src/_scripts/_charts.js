@@ -287,13 +287,13 @@ svg.append("g")
     .attr("width", d => xScale(d[1]-d[0]))
     .attr("height",yScale.bandwidth()-20)
   .on('mouseenter', function(d) {
-      var xPosition = d3.mouse(this)[0] - 15;//d3.mouse(this)[0];
-      var yPosition = yScale(d.type) + yScale.bandwidth()/2;//d3.mouse(this)[1] + 25;//d3.mouse(this[1]);
+      //var xPosition = chartWidth/2//d3.mouse(this)[0] - 15;//d3.mouse(this)[0];
+      //var yPosition = 0//yScale(d.type) + yScale.bandwidth()/2;//d3.mouse(this)[1] + 25;//d3.mouse(this[1]);
       //var yPosition = d3.mouse(this)[1] + 50;
       d3.select(this).classed('highlight', true);
-        .attr("x",function(d) {return xPosition;})
-        .attr("y",functino(d) {return yPosition;})
-        myTool.html("testing")
+        //.attr("x",function(d) {return xPosition;})
+        //.attr("y",function(d) {return yPosition;})
+        //myTool.html("testing")
       //tooltip.select("text").text("testing")
       //  .attr('transform', `translate(${xPosition}, ${yPosition})`)
       //tooltip.text(d.key + " : " + d3.format(".0%")(xScale(d[1]-d[0])))// ": " + d3.format(".0%")(d[1]-d[0]))
