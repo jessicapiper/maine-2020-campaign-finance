@@ -211,8 +211,8 @@ var svg = container.append('svg')
             .attr('height', containerHeight)
             .append('g')
                 .attr('transform', `translate(${margin.left}, ${margin.top})`)
-var yDomain = pac_data.map(d => d.type);
-var xDomain = [0,1];
+var yDomain = pac_data_2.map(d => d.type);
+var xDomain = [0,2000000];
 
 var yScale = d3.scaleBand()
               .domain(yDomain)
@@ -223,12 +223,12 @@ var xScale = d3.scaleLinear()
               .domain(xDomain)
               .range([0, chartWidth]);
 
-var formatAxis = d3.format(".0%");
+var formatAxis = d3.format("$.1s");
 
 var xAxis = d3.axisBottom(xScale)
           .tickFormat(formatAxis)
           .tickSize(-chartWidth)
-          .ticks(4);
+          .ticks(2);
 
 var yAxis = d3.axisLeft(yScale);
 
@@ -255,7 +255,7 @@ var tooltip = svg.append('text')
 
 var keys = ["ideological","leadership","labor","business","other"]
 
-var series = d3.stack().keys(keys)(pac_data)
+var series = d3.stack().keys(keys)(pac_data_2)
 
 console.log(series);
 

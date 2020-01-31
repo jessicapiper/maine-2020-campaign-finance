@@ -1,0 +1,18 @@
+[
+  {
+    "type": "Susan Collins",
+    "business": 1511700,
+    "ideological": 91566,
+    "labor": 49000,
+    "leadership": 351900,
+    "other": 11000
+  },
+  {
+    "type": "Sara Gideon",
+    "business": 0,
+    "ideological": 35047.50,
+    "labor": 10000,
+    "leadership": 56000,
+    "other": 0
+  }
+]

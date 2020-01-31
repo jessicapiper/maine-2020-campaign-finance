@@ -10,16 +10,20 @@
 {% endblock %}
 {% block content%}
 
-<p>Money is expected to play a major role in Maine’s Senate race this year,
-as incumbent Republican Susan Collins faces the most difficult reelection
-campaign of her career. We’re tracking where all the candidates stand when it
-comes to fundraising this year. These charts are updated every quarter when we
-get new data.</p>
+<p>The Maine Senate race is expected to be the most expensive in the state’s
+history, with one firm predicting that $55 million will be spent on advertising
+alone. We’re tracking where all the candidates stand on fundraising this year.
+These charts are updated quarterly when new data is submitted to the Federal
+Election Commission.
+</p>
 
 <section>
-<h3>How much candidates raised through the end of 2019.</h3>
-<p>Collins continues to be a strong fundraiser, while Sara Gideon is
-significantly outraising all of her opponents in the Democratic primary.</p>
+<h3>How much did candidates raise through the end of 2019?</h3>
+<p>Sen. Susan Collins, a Republican, continues to be a strong fundraiser,
+while Sara Gideon is significantly outraising of her opponents in the Democratic
+primary -- Betsy Sweet, Ross LaJeunesse and Bre Kidman -- and Green hopeful
+Lisa Savage.
+</p>
 <div class="charts">
   <div class="inline-chart" id="total-raised">
   <h4 class="chart-title">Total raised this cycle</h4> </div>
@@ -31,12 +35,12 @@ significantly outraising all of her opponents in the Democratic primary.</p>
 </div>
 </section>
 
-<h3>What goes into that fundraising.</h3>
+<h3>Sources of funding:</h3>
 <p>Candidates raise money from a variety of different sources. Large
 contributions are classified as donations coming from individuals who have
 given at least $200 to the candidate during the election cycle. Small
-contributions are from individuals who gave less than that. PACs are
-allowed to give up to $5,000 to each candidate in a given election cycle.
+contributions are from individuals who gave less. Political action committees
+are allowed to give up to $5,000 directly to each candidate in a given election cycle.
 </p>
 <div class="charts">
   <div class="inline-chart" id="percent-small-donors">
@@ -50,17 +54,18 @@ allowed to give up to $5,000 to each candidate in a given election cycle.
   <p style="text-align:right">Source: BDN analysis of FEC data</p>
 </div>
 
-<h3>But there are different kinds of PACs.</h3>
+<h3>There are different kinds of PACs.</h3>
 <p>Not all PACs are the same -- they represent a variety of different interests
 and groups. Broadly, PACs can be classified into four main categories. Ideological
 PACs work to advance a particular issue or set of issues. PACs in this category
-include Emily's List, which works to elect female candidates, and No Labels, which
-aims to reduce partisanship. Leadership PACs are associated with a particular politician. 
-Many members of Congress have these PACs, which they use to support other
-candidates. Labor PACs work to advance the interests of labor unions, and are
-often funded by union members. Business PACs, sometimes referred to as corporate
+include EMILY’s List, which works to elect female Democratic candidates, and
+No Labels, which aims to reduce partisanship. Leadership PACs are associated with
+a particular politician. Many members of Congress have these PACs, which they use
+to support other candidates. Labor PACs advance the interests of labor unions, and
+are often funded by union members. Business PACs, sometimes referred to as corporate
 PACs, generally work to advance the interests of the businesses or corporate groups
-that they represent.</p>
+that they represent.
+</p>
 <div class="charts">
   <h4 class="chart-title">Share of different types of PAC money received by each candidate</h4></div>
   <div class="long-chart" id="all-pacs"></div>
@@ -71,6 +76,10 @@ that they represent.</p>
 
 <script>
 var senate_data_4 = {% include '_data/senate_data_4.json' %};
+</script>
+
+<script>
+var pac_data_2 = {% include '_data/pac_data_2.json' %};
 </script>
 
 <script>
