@@ -6,7 +6,7 @@
 
 {% block byline %}By Jessica Piper{% endblock %}
 {% block pubdate %}
-    <time datetime="2020-01-8" pubdate>Jan. 8, 2020</time>
+    <time datetime="2020-02-1" pubdate>Jan. 8, 2020</time>
 {% endblock %}
 {% block content%}
 
