@@ -79,7 +79,7 @@ var senate_topline = {% include '_data/senate_topline.json' %};
 </script>
 
 <script>
-var pac_data_2 = {% include '_data/pac_data_2.json' %};
+var senate_pacs = {% include '_data/senate_pacs.json' %};
 </script>
 
 <script>

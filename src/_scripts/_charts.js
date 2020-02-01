@@ -209,8 +209,8 @@ var svg = container.append('svg')
             .attr('height', containerHeight)
             .append('g')
                 .attr('transform', `translate(${margin.left}, ${margin.top})`)
-var yDomain = pac_data_2.map(d => d.type);
-var xDomain = [0,2000000];
+var yDomain = senate_pacs.map(d => d.type);
+var xDomain = [0,2500000];
 
 var yScale = d3.scaleBand()
               .domain(yDomain)
@@ -253,7 +253,7 @@ var tooltip = svg.append('text')
 
 var keys = ["ideological","leadership","labor","business","other"]
 
-var series = d3.stack().keys(keys)(pac_data_2)
+var series = d3.stack().keys(keys)(senate_pacs)
 
 console.log(series);
 
@@ -264,7 +264,6 @@ var color = d3.scaleOrdinal()
   .unknown("#ccc")
 
 //console.log(color);
-
 
 var myTool = d3.select("body")
                   .append("div")
