@@ -71,7 +71,7 @@ svg.selectAll('.bar')
     .attr('height', d => chartHeight - yScale(d[fieldname]))
     .attr("fill",function(d, i){
       if(d.party == "D"){
-        return "#3333ff"
+        return "#3366ff"
       }else if (d.party == "R") {
         return "#e60000"
       }else {
@@ -165,7 +165,7 @@ svg.selectAll('.bar')
     .attr('height', d => chartHeight - yScale(d[fieldname]))
     .attr("fill",function(d, i){
       if(d.party == "D"){
-        return "#3333ff"
+        return "#3366ff"
       }else if (d.party == "R") {
         return "#e60000"
       }else {
@@ -273,14 +273,6 @@ var color = d3.scaleOrdinal()
   .range(d3.quantize(t => d3.interpolateSpectral(t * 0.8 + 0.1), series.length).reverse())
   .unknown("#ccc")
 
-//console.log(color);
-
-/*var myTool = d3.select("body")
-                  .append("div")
-                  .attr("class", "mytooltip")
-                  .style("opacity", "0")
-                  .style("display", "none");*/
-
 svg.append("g")
   .selectAll("g")
   .data(series)
@@ -294,12 +286,9 @@ svg.append("g")
     .attr("width", d => xScale(d[1]-d[0]))
     .attr("height",yScale.bandwidth()-20)
   .on('mouseenter', function(d) {
-      //var xPosition = chartWidth/2//d3.mouse(this)[0] - 15;//d3.mouse(this)[0];
-      //var yPosition = 0//yScale(d.type) + yScale.bandwidth()/2;//d3.mouse(this)[1] + 25;//d3.mouse(this[1]);
-      //var yPosition = d3.mouse(this)[1] + 50;
       var coordinates= d3.mouse(this);
       var xPosition = coordinates[0]//coordinates[0];
-      var yPosition = coordinates[1]-10//coordinates[1] + 25;
+      var yPosition = coordinates[1]+10//coordinates[1] + 25;
       d3.select(this).classed('highlight', true);
       tooltip.html((d.key) + ": " + d3.format("$.1s")(xScale(d[1]-d[0])))//(d3.format("$,.0f")(xScale(d[1]-d[0]))
             .style("opacity", 1)
@@ -317,19 +306,6 @@ svg.append("g")
       d3.select(this).classed('highlight', false);
       tooltip.text('');
     });
-
-/*var text = svg.selectAll("text")
-  .data(function(d){
-    return d;
-  })
-  .enter()
-  .append("text")
-    .attr("class","text")
-    .attr("x",function(d){
-      return xScale(d.y0);
-    })
-    .attr("y",70)
-    .text(function(d){return d.x;})*/
 
 var legend = svg.append("g")
   .attr("width",series.length * 36)

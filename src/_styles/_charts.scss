@@ -46,45 +46,9 @@
   font-family: Helvetica;
   font-size: 12px;
   text-anchor: middle;
-  box-shadow: -3px 3px 15px #888888;
-  color: black;
-  //position: absolute;
-  //background: none repeat scroll 0 0 white;
-  background: #ffffff;
-  padding: 5px;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
   //opacity: 0.5
 }
-
-/*.mytooltip {
-  position:absolute;
-  text-align: center;
-  width: 200px;
-  height:auto;
-  background-color: #EDE3D1;
-  border-radius: 10px;
-  color: #787777;
-  padding: 6px 12px;
-  z-index:3;
-}
-
-.mytooltip:after {
-  box-sizing: border-box;
-  display: inline;
-  width: 100%;
-  line-height: 1;
-  color: #EDE3D1;
-  content: "\25BC";
-  position: absolute;
-  text-align: center;
-  margin: -3px 0 0 0;
-  top: 100%;
-  left: 0;
-}
-
-.mytooltip span {
-    display: block;
-    text-align: center;
-    width: 200px;
-    height: auto;
-    margin: 5px auto;
-  }*/
