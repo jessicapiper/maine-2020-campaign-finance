@@ -71,7 +71,7 @@ svg.selectAll('.bar')
     .attr('height', d => chartHeight - yScale(d[fieldname]))
     .attr("fill",function(d, i){
       if(d.party == "D"){
-        return "#1a53ff"
+        return "#0052cc"
       }else if (d.party == "R") {
         return "#e60000"
       }else {
@@ -165,7 +165,7 @@ svg.selectAll('.bar')
     .attr('height', d => chartHeight - yScale(d[fieldname]))
     .attr("fill",function(d, i){
       if(d.party == "D"){
-        return "#1a53ff"
+        return "#0052cc"
       }else if (d.party == "R") {
         return "#e60000"
       }else {
