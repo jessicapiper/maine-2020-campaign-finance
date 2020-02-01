@@ -71,9 +71,9 @@ svg.selectAll('.bar')
     .attr('height', d => chartHeight - yScale(d[fieldname]))
     .attr("fill",function(d, i){
       if(d.party == "D"){
-        return "#003F92"
+        return "#3333ff"
       }else if (d.party == "R") {
-        return "#B90C0C"
+        return "#e60000"
       }else {
         return "green";
       }
@@ -165,9 +165,9 @@ svg.selectAll('.bar')
     .attr('height', d => chartHeight - yScale(d[fieldname]))
     .attr("fill",function(d, i){
       if(d.party == "D"){
-        return "#003F92"
+        return "#3333ff"
       }else if (d.party == "R") {
-        return "#B90C0C"
+        return "#e60000"
       }else {
         return "green";
       }
@@ -247,9 +247,19 @@ svg.append("g")
 
 var tooltip = svg.append('text')
     .attr('class', 'chart-tooltip')
-    .style("position","absolute")
-    .style("visibility","hidden")
-    .style("background", "#000");
+    .style('background-color',"#ffffff")
+    .style("border-radius", "5px")
+    .style("padding", "10px")
+    .style("color", "white")
+    //.style("position","absolute")
+    //.style("visibility","hidden")
+    //.style("background", "#000");
+
+/*(tooltip.append("rect")
+    .attr("width", 60)
+    .attr("height", 20)
+    .attr("fill", "white")
+    .style("opacity", 0.2);*/
 
 var keys = ["ideological","leadership","labor","business","other"]
 
@@ -265,11 +275,11 @@ var color = d3.scaleOrdinal()
 
 //console.log(color);
 
-var myTool = d3.select("body")
+/*var myTool = d3.select("body")
                   .append("div")
                   .attr("class", "mytooltip")
                   .style("opacity", "0")
-                  .style("display", "none");
+                  .style("display", "none");*/
 
 svg.append("g")
   .selectAll("g")
@@ -288,11 +298,12 @@ svg.append("g")
       //var yPosition = 0//yScale(d.type) + yScale.bandwidth()/2;//d3.mouse(this)[1] + 25;//d3.mouse(this[1]);
       //var yPosition = d3.mouse(this)[1] + 50;
       var coordinates= d3.mouse(this);
-      var xPosition = chartWidth*0.8//coordinates[0];
-      var yPosition = chartHeight*0.8//coordinates[1] + 25;
+      var xPosition = coordinates[0]//coordinates[0];
+      var yPosition = coordinates[1]-10//coordinates[1] + 25;
       d3.select(this).classed('highlight', true);
-      tooltip.text("testing")//(d3.format("$,.0f")(xScale(d[1]-d[0]))
-            .attr('transform',`translate(${xPosition}, ${yPosition}) rotate (-10)`)
+      tooltip.html((d.key) + ": " + d3.format("$.1s")(xScale(d[1]-d[0])))//(d3.format("$,.0f")(xScale(d[1]-d[0]))
+            .style("opacity", 1)
+            .attr('transform',`translate(${xPosition}, ${yPosition}) `) //rotate (-10)`)
         //.attr("x",function(d) {return xPosition;})
         //.attr("y",function(d) {return yPosition;})
         //myTool.html("testing")
