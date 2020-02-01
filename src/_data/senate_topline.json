@@ -1,0 +1,74 @@
+[
+  {
+    "candidate": "reporting_period",
+    "Collins for Senator": "YE",
+    "Sara Gideon for Maine": "YE",
+    "Ross for Maine": "YE",
+    "Sweet for Senate": "YE",
+    "Lisa for Maine": "YE",
+    "Friends of Bre Kidman": "YE"
+  },
+  {
+    "candidate": "total_net_contributions",
+    "Collins for Senator": 10756693,
+    "Sara Gideon for Maine": 7675361.6,
+    "Ross for Maine": 349205.9,
+    "Sweet for Senate": 271813.6,
+    "Lisa for Maine": 24535.31,
+    "Friends of Bre Kidman": 16207.63
+  },
+  {
+    "candidate": "total_spending",
+    "Collins for Senator": 5053304,
+    "Sara Gideon for Maine": 4897064,
+    "Ross for Maine": 223442.1,
+    "Sweet for Senate": 216554.1,
+    "Lisa for Maine": 13499.6,
+    "Friends of Bre Kidman": 9701.37
+  },
+  {
+    "candidate": "cash_on_hand",
+    "Collins for Senator": 7195341.74,
+    "Sara Gideon for Maine": 2777850,
+    "Ross for Maine": 375763.77,
+    "Sweet for Senate": 55322.9,
+    "Lisa for Maine": 11035.71,
+    "Friends of Bre Kidman": 6506.26
+  },
+  {
+    "candidate": "percent_from_small_donors",
+    "Collins for Senator": 0.104422766692941,
+    "Sara Gideon for Maine": 0.417894047451678,
+    "Ross for Maine": 0.0591940170541219,
+    "Sweet for Senate": 0.548426200896497,
+    "Lisa for Maine": 0.466340551637619,
+    "Friends of Bre Kidman": 0.184797530545799
+  },
+  {
+    "candidate": "percent_from_large_donors",
+    "Collins for Senator": 0.660413475665305,
+    "Sara Gideon for Maine": 0.559385185241154,
+    "Ross for Maine": 0.608623737456899,
+    "Sweet for Senate": 0.438743315271936,
+    "Lisa for Maine": 0.479092785051422,
+    "Friends of Bre Kidman": 0.606047892258153
+  },
+  {
+    "candidate": "percent_from_PACs",
+    "Collins for Senator": 0.231147985386795,
+    "Sara Gideon for Maine": 0.0233884344799801,
+    "Ross for Maine": 0,
+    "Sweet for Senate": 0.0120947958453882,
+    "Lisa for Maine": 0,
+    "Friends of Bre Kidman": 0
+  },
+  {
+    "candidate": "party",
+    "Collins for Senator": "R",
+    "Sara Gideon for Maine": "D",
+    "Ross for Maine": "D",
+    "Sweet for Senate": "D",
+    "Lisa for Maine": "G",
+    "Friends of Bre Kidman": "D"
+  }
+]

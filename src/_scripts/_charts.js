@@ -291,8 +291,8 @@ svg.append("g")
       //var yPosition = 0//yScale(d.type) + yScale.bandwidth()/2;//d3.mouse(this)[1] + 25;//d3.mouse(this[1]);
       //var yPosition = d3.mouse(this)[1] + 50;
       var coordinates= d3.mouse(this);
-      var xPosition = coordinates[0];
-      var yPosition = coordinates[1] + 25;
+      var xPosition = chartWidth*0.8//coordinates[0];
+      var yPosition = chartHeight*0.8//coordinates[1] + 25;
       d3.select(this).classed('highlight', true);
       tooltip.text("testing")//(d3.format("$,.0f")(xScale(d[1]-d[0]))
             .attr('transform',`translate(${xPosition}, ${yPosition}) rotate (-10)`)
