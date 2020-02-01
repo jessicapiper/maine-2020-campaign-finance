@@ -17,8 +17,8 @@ var svg = container.append('svg')
             .attr('height', containerHeight)
             .append('g')
                 .attr('transform', `translate(${margin.left}, ${margin.top})`)
-var xDomain = senate_topline.map(d => d.candidate);
-var yDomain = [0,d3.max(senate_topline.map(d => d.total_net_contributions))+1000000];
+var xDomain = cd2_topline.map(d => d.candidate);
+var yDomain = [0,d3.max(cd2_topline.map(d => d.total_net_contributions))+100000];
 
 var xScale = d3.scaleBand()
               .domain(xDomain)
@@ -61,7 +61,7 @@ var colors = d3.scaleLinear()
 console.log(colors)
 
 svg.selectAll('.bar')
-    .data(senate_topline)
+    .data(cd2_topline)
     .enter()
     .append('rect')
     .attr('class', 'bar')
@@ -117,7 +117,7 @@ var svg = container.append('svg')
             .attr('height', containerHeight)
             .append('g')
                 .attr('transform', `translate(${margin.left}, ${margin.top})`)
-var xDomain = senate_topline.map(d => d.candidate);
+var xDomain = cd2_topline.map(d => d.candidate);
 var yDomain = [0,1];
 
 var xScale = d3.scaleBand()
@@ -155,7 +155,7 @@ var tooltip = svg.append('text')
     .attr('class', 'chart-tooltip');
 
 svg.selectAll('.bar')
-    .data(senate_topline)
+    .data(cd2_topline)
     .enter()
     .append('rect')
     .attr('class', 'bar')
@@ -215,8 +215,8 @@ var svg = container.append('svg')
             .attr('height', containerHeight)
             .append('g')
                 .attr('transform', `translate(${margin.left}, ${margin.top})`)
-var yDomain = senate_pacs.map(d => d.type);
-var xDomain = [0,2500000];
+var yDomain = cd2_pacs.map(d => d.type);
+var xDomain = [0,250000];
 
 var yScale = d3.scaleBand()
               .domain(yDomain)
@@ -271,7 +271,7 @@ var tooltip = svg.append('text')
 
 var keys = ["ideological","leadership","labor","business","other"]
 
-var series = d3.stack().keys(keys)(senate_pacs)
+var series = d3.stack().keys(keys)(cd2_pacs)
 
 console.log(series);
 

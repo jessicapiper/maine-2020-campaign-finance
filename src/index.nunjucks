@@ -2,28 +2,23 @@
 
 {% import "_modules/link/link.nunjucks" as link %}
 
-{% block headline %}Breaking down the money in the Maine Senate race{% endblock %}
+{% block headline %}Breaking down the money in the Maine 2nd District race{% endblock %}
 
 {% block byline %}By Jessica Piper{% endblock %}
 {% block pubdate %}
-    <time datetime="2020-02-1" pubdate>Jan. 8, 2020</time>
+    <time datetime="2020-02-1" pubdate>Feb. 1, 2020</time>
 {% endblock %}
 {% block content%}
 
-<p>The Maine Senate race <a href=https://bangordailynews.com/2019/12/01/politics/a-guide-to-the-millions-pouring-into-maine-for-the-2020-us-senate-race/>is expected to be</a>
- the most expensive in the state’s history, with one firm predicting that $55 million
- will be spent on advertising alone. We’re tracking where all the candidates stand
- on fundraising this year.
-These charts are updated quarterly when new data is submitted to the Federal
-Election Commission.
+<p>Maine’s 2nd District set a record for the most spending in a House race in
+state history in 2018, and is likely to be competitive -- and expensive -- again
+in 2020. These charts are updated every quarter when we get new data.
 </p>
 
 <section>
 <h3>How much did candidates raise through the end of 2019?</h3>
-<p>Sen. Susan Collins, a Republican, continues to be a strong fundraiser,
-while Sara Gideon is significantly outraising of her opponents in the Democratic
-primary -- Betsy Sweet, Ross LaJeunesse and Bre Kidman -- and Green hopeful
-Lisa Savage.
+<p>Incumbent Democrat Jared Golden is comfortably ahead of his Republican challengers
+so far.
 </p>
 <div class="charts">
   <div class="inline-chart" id="total-raised">
@@ -42,8 +37,8 @@ contributions are classified as donations coming from individuals who have
 given at least $200 to the candidate during the election cycle. Small
 contributions are from individuals who gave less. Political action committees
 are allowed to give up to $5,000 directly to each candidate in a given election cycle.
-Percentages might not add to 100 percent because of loans and candidate
-self-funding.
+Percentages might not add to 100 percent because of loans, candidate
+self-funding and transfers from other committees.
 </p>
 <div class="charts">
   <div class="inline-chart" id="percent-small-donors">
