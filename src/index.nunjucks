@@ -75,7 +75,7 @@ that they represent.
 {% block scripts %}
 
 <script>
-var senate_data_4 = {% include '_data/senate_data_4.json' %};
+var senate_topline = {% include '_data/senate_topline.json' %};
 </script>
 
 <script>

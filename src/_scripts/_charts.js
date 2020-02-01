@@ -2,7 +2,7 @@ var d3 = require("d3");
 
 function totalsChart(el, fieldname) {
 
-var margin = {top: 10, right:20, bottom:80, left:60};
+var margin = {top: 10, right:20, bottom:90, left:60};
 
 var container = d3.select(el);
 
@@ -17,8 +17,8 @@ var svg = container.append('svg')
             .attr('height', containerHeight)
             .append('g')
                 .attr('transform', `translate(${margin.left}, ${margin.top})`)
-var xDomain = senate_data_4.map(d => d.candidate);
-var yDomain = [0,d3.max(senate_data_4.map(d => d.total_net_contributions))+1000000];
+var xDomain = senate_topline.map(d => d.candidate);
+var yDomain = [0,d3.max(senate_topline.map(d => d.total_net_contributions))+1000000];
 
 var xScale = d3.scaleBand()
               .domain(xDomain)
@@ -61,7 +61,7 @@ var colors = d3.scaleLinear()
 console.log(colors)
 
 svg.selectAll('.bar')
-    .data(senate_data_4)
+    .data(senate_topline)
     .enter()
     .append('rect')
     .attr('class', 'bar')
@@ -69,23 +69,15 @@ svg.selectAll('.bar')
     .attr('y', d => yScale(d[fieldname]))
     .attr('width', xScale.bandwidth())
     .attr('height', d => chartHeight - yScale(d[fieldname]))
-    .attr('fill',function(d){
-      return "#006600";
-    })
-    /*.attr("fill", function(d){
-      //return colors(d.party);
-      //console.log(d3.select(this))
-      //d3.select(this.parentNode)
-      //var parentData = d3.select(this.parentNode).pacData()[0];
-      //console.log(parentData)
-      if(d.party = "D"){
+    .attr("fill",function(d, i){
+      if(d.party == "D"){
         return "#003F92"
-      }else if (d.party = "R") {
+      }else if (d.party == "R") {
         return "#B90C0C"
       }else {
         return "green";
       }
-    })*/
+    })
     .on('mouseenter', function(d) {
       // centers the text above each bar
       var x = xScale(d.candidate) + xScale.bandwidth() / 2;
@@ -93,7 +85,7 @@ svg.selectAll('.bar')
       var y = yScale(d[fieldname]) - 5;
       d3.select(this).classed('highlight', true);
       tooltip.text(d3.format("$,.0f")(d[fieldname]))
-            .attr('transform',`translate(${x + 8}, ${y - 4}) rotate (-10)`)
+            .attr('transform',`translate(${x + 16}, ${y - 4}) rotate (-5)`)
     })
     .on('mouseleave', function(d) {
       d3.select(this).classed('highlight', false);
@@ -110,7 +102,7 @@ totalsChart("#cash-on-hand", "cash_on_hand")
 
 function percentChart(el, fieldname) {
 
-var margin = {top: 20, right:20, bottom:80, left:60};
+var margin = {top: 20, right:20, bottom:90, left:60};
 
 var container = d3.select(el);
 
@@ -125,7 +117,7 @@ var svg = container.append('svg')
             .attr('height', containerHeight)
             .append('g')
                 .attr('transform', `translate(${margin.left}, ${margin.top})`)
-var xDomain = senate_data_4.map(d => d.candidate);
+var xDomain = senate_topline.map(d => d.candidate);
 var yDomain = [0,1];
 
 var xScale = d3.scaleBand()
@@ -163,7 +155,7 @@ var tooltip = svg.append('text')
     .attr('class', 'chart-tooltip');
 
 svg.selectAll('.bar')
-    .data(senate_data_4)
+    .data(senate_topline)
     .enter()
     .append('rect')
     .attr('class', 'bar')
@@ -171,8 +163,14 @@ svg.selectAll('.bar')
     .attr('y', d => yScale(d[fieldname]))
     .attr('width', xScale.bandwidth())
     .attr('height', d => chartHeight - yScale(d[fieldname]))
-    .attr('fill',function(d){
-      return "#006600";
+    .attr("fill",function(d, i){
+      if(d.party == "D"){
+        return "#003F92"
+      }else if (d.party == "R") {
+        return "#B90C0C"
+      }else {
+        return "green";
+      }
     })
     .on('mouseenter', function(d) {
       // centers the text above each bar
