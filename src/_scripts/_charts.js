@@ -71,7 +71,7 @@ svg.selectAll('.bar')
     .attr('height', d => chartHeight - yScale(d[fieldname]))
     .attr("fill",function(d, i){
       if(d.party == "D"){
-        return "#3366ff"
+        return "#1a53ff"
       }else if (d.party == "R") {
         return "#e60000"
       }else {
@@ -165,7 +165,7 @@ svg.selectAll('.bar')
     .attr('height', d => chartHeight - yScale(d[fieldname]))
     .attr("fill",function(d, i){
       if(d.party == "D"){
-        return "#3366ff"
+        return "#1a53ff"
       }else if (d.party == "R") {
         return "#e60000"
       }else {
@@ -191,6 +191,12 @@ svg.selectAll('.bar')
 percentChart("#percent-small-donors", "percent_from_small_donors")
 percentChart("#percent-large-donors", "percent_from_large_donors")
 percentChart("#percent-pacs", "percent_from_PACs")
+
+d3.selection.prototype.moveToFront = function() {
+  return this.each(function(){
+    this.parentNode.appendChild(this);
+  });
+};
 
 function pacChart(el) {
 
@@ -247,11 +253,13 @@ svg.append("g")
 
 var tooltip = svg.append('text')
     .attr('class', 'chart-tooltip')
-    .style('background-color',"#ffffff")
+    //.style('background-color',"#ffffff")
     .style("border-radius", "5px")
     .style("padding", "10px")
     .style("color", "white")
-    //.style("position","absolute")
+    //.attr("width", 60)
+    //.attr("height", 20)
+    //.attr("color","#ffffff")
     //.style("visibility","hidden")
     //.style("background", "#000");
 
@@ -290,9 +298,10 @@ svg.append("g")
       var xPosition = coordinates[0]//coordinates[0];
       var yPosition = coordinates[1]+10//coordinates[1] + 25;
       d3.select(this).classed('highlight', true);
-      tooltip.html((d.key) + ": " + d3.format("$.1s")(xScale(d[1]-d[0])))//(d3.format("$,.0f")(xScale(d[1]-d[0]))
+      tooltip.html(d3.format("$.1s")(d[1]-d[0]))//(d3.format("$,.0f")(xScale(d[1]-d[0]))
             .style("opacity", 1)
-            .attr('transform',`translate(${xPosition}, ${yPosition}) `) //rotate (-10)`)
+            .attr('transform',`translate(${xPosition}, ${yPosition}) `)
+            .moveToFront();//rotate (-10)`)
         //.attr("x",function(d) {return xPosition;})
         //.attr("y",function(d) {return yPosition;})
         //myTool.html("testing")
