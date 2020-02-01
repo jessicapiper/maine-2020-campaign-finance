@@ -295,21 +295,13 @@ svg.append("g")
     .attr("height",yScale.bandwidth()-20)
   .on('mouseenter', function(d) {
       var coordinates= d3.mouse(this);
-      var xPosition = coordinates[0]//coordinates[0];
-      var yPosition = coordinates[1]+10//coordinates[1] + 25;
+      var xPosition = xScale(d[0])+ xScale(d[1]-d[0])/1.4//coordinates[0]+10//coordinates[0];
+      var yPosition = yScale(d.data.type)+65//coordinates[1]-10//coordinates[1] + 25;
       d3.select(this).classed('highlight', true);
-      tooltip.html(d3.format("$.1s")(d[1]-d[0]))//(d3.format("$,.0f")(xScale(d[1]-d[0]))
-            .style("opacity", 1)
+      tooltip.html(d3.format("$,.0f")(d[1]-d[0]))//(d3.format("$,.0f")(xScale(d[1]-d[0]))
+            //.style("opacity", 1)
             .attr('transform',`translate(${xPosition}, ${yPosition}) `)
             .moveToFront();//rotate (-10)`)
-        //.attr("x",function(d) {return xPosition;})
-        //.attr("y",function(d) {return yPosition;})
-        //myTool.html("testing")
-      //tooltip.select("text").text("testing")
-      //  .attr('transform', `translate(${xPosition}, ${yPosition})`)
-      //tooltip.text(d.key + " : " + d3.format(".0%")(xScale(d[1]-d[0])))// ": " + d3.format(".0%")(d[1]-d[0]))
-      /*tooltip.text(d3.format(".0%")xScale(d[1]-d[0]))
-            .attr('transform', `translate(${xPosition}, ${yPosition})`)*/
     })
     .on('mouseleave', function(d) {
       d3.select(this).classed('highlight', false);
