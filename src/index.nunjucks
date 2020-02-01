@@ -83,7 +83,11 @@ var senate_pacs = {% include '_data/senate_pacs.json' %};
 </script>
 
 <script>
-var pac_data = {% include '_data/pac_data.json' %};
+var cd2_pacs = {% include '_data/cd2_pacs.json' %};
+</script>
+
+<script>
+var cd2_topline = {% include '_data/cd2_topline.json' %};
 </script>
 
 {% endblock %}
