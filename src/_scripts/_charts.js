@@ -18,7 +18,7 @@ var svg = container.append('svg')
             .append('g')
                 .attr('transform', `translate(${margin.left}, ${margin.top})`)
 var xDomain = cd2_topline.map(d => d.candidate);
-var yDomain = [0,d3.max(cd2_topline.map(d => d.total_net_contributions))+100000];
+var yDomain = [0,d3.max(cd2_topline.map(d => d.total_net_contributions))+400000];
 
 var xScale = d3.scaleBand()
               .domain(xDomain)
@@ -29,13 +29,13 @@ var yScale = d3.scaleLinear()
               .domain(yDomain)
               .range([chartHeight, 0]);
 
-var formatAxis = d3.format("$.1s");
+var formatAxis = d3.format("$.2s");
 
 var xAxis = d3.axisBottom(xScale);
 var yAxis = d3.axisLeft(yScale)
               .tickFormat(formatAxis)
               .tickSize(-chartWidth)
-              .ticks(4);
+              .ticks(3);
 
 svg.append("g")
     .attr("class", "x axis")
@@ -200,7 +200,7 @@ d3.selection.prototype.moveToFront = function() {
 
 function pacChart(el) {
 
-var margin = {top: 20, right:20, bottom:70, left:80};
+var margin = {top: 20, right:20, bottom:70, left:90};
 
 var container = d3.select(el);
 
