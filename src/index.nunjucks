@@ -26,7 +26,7 @@ Lisa Savage.
 </p>
 <div class="charts">
   <div class="inline-chart" id="total-raised">
-  <h4 class="chart-title">Total raised this cycle</h4> </div>
+  <h4 class="chart-title">Total contributions this cycle</h4> </div>
   <div class="inline-chart" id="total-spent">
   <h4 class="chart-title">Total spent this cycle</h4> </div>
   <div class="inline-chart" id="cash-on-hand">
@@ -41,6 +41,8 @@ contributions are classified as donations coming from individuals who have
 given at least $200 to the candidate during the election cycle. Small
 contributions are from individuals who gave less. Political action committees
 are allowed to give up to $5,000 directly to each candidate in a given election cycle.
+Percentages might not add to 100 percent because of loans and candidate
+self-funding.
 </p>
 <div class="charts">
   <div class="inline-chart" id="percent-small-donors">
@@ -49,8 +51,6 @@ are allowed to give up to $5,000 directly to each candidate in a given election 
   <h4 class="chart-title">Percent from large donors</h4></div>
   <div class="inline-chart" id="percent-pacs">
   <h4 class="chart-title">Percent from PACS</h4></div>
-  <p style="text-align:left">*Note: Percentages might not add to 100% because of
-  rounding and candidate self-funding.</p>
   <p style="text-align:right">Source: BDN analysis of FEC data</p>
 </div>
 
@@ -69,6 +69,7 @@ that they represent.
 <div class="charts">
   <h4 class="chart-title">Share of different types of PAC money received by each candidate</h4></div>
   <div class="long-chart" id="all-pacs"></div>
+  <p style="text-align:right">Source: BDN analysis of FEC data</p>
 </div>
 {% endblock %}
 
