@@ -295,8 +295,8 @@ svg.append("g")
     .attr("height",yScale.bandwidth()-20)
   .on('mouseenter', function(d) {
       var coordinates= d3.mouse(this);
-      var xPosition = xScale(d[0])+ xScale(d[1]-d[0])/1.4//coordinates[0]+10//coordinates[0];
-      var yPosition = yScale(d.data.type)+65//coordinates[1]-10//coordinates[1] + 25;
+      var xPosition = xScale(d[0])+ xScale(d[1]-d[0])/1.4 + 8//coordinates[0]+10//coordinates[0];
+      var yPosition = yScale(d.data.type)+59//coordinates[1]-10//coordinates[1] + 25;
       d3.select(this).classed('highlight', true);
       tooltip.html(d3.format("$,.0f")(d[1]-d[0]))//(d3.format("$,.0f")(xScale(d[1]-d[0]))
             //.style("opacity", 1)
