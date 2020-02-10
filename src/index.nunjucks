@@ -16,7 +16,7 @@ so far.
   <h4 class="chart-title">Total spent this cycle</h4> </div>
   <div class="inline-chart" id="cash-on-hand">
   <h4 class="chart-title">Cash on hand as of Dec. 31</h4> </div>
-  <p style="text-align:right">Source: BDN analysis of FEC data</p>
+  <p style="text-align:right"><small>Source: BDN analysis of FEC data</small></p>
 </div>
 </section>
 
@@ -36,7 +36,7 @@ self-funding and transfers from other committees.
   <h4 class="chart-title">Percent from large donors</h4></div>
   <div class="inline-chart" id="percent-pacs">
   <h4 class="chart-title">Percent from PACS</h4></div>
-  <p style="text-align:right">Source: BDN analysis of FEC data</p>
+  <p style="text-align:right"><small>Source: BDN analysis of FEC data</small></p>
 </div>
 
 <h3>There are different kinds of PACs.</h3>
@@ -54,7 +54,7 @@ that they represent.
 <div class="charts">
   <h4 class="chart-title">How much money candidates received from each type of PAC</h4></div>
   <div class="long-chart" id="all-pacs"></div>
-  <p style="text-align:right">Source: BDN analysis of FEC data</p>
+  <p style="text-align:right"><small>Source: BDN analysis of FEC data</small></p>
 </div>
 {% endblock %}
 
