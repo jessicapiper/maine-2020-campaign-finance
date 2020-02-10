@@ -2,21 +2,7 @@
 
 {% import "_modules/link/link.nunjucks" as link %}
 
-{% block headline %}Breaking down the money in the Maine Senate race{% endblock %}
-
-{% block byline %}By Jessica Piper{% endblock %}
-{% block pubdate %}
-    <time datetime="2020-02-1" pubdate>Feb. 1, 2020</time>
-{% endblock %}
 {% block content%}
-
-<p>The Maine Senate race <a href=https://bangordailynews.com/2019/12/01/politics/a-guide-to-the-millions-pouring-into-maine-for-the-2020-us-senate-race/>is expected to be</a>
- the most expensive in the state’s history, with one firm predicting that $55 million
- will be spent on advertising alone. We’re tracking where all the candidates stand
- on fundraising this year.
-These charts are updated quarterly when new data is submitted to the Federal
-Election Commission.
-</p>
 
 <section>
 <h3>How much did candidates raise through the end of 2019?</h3>
