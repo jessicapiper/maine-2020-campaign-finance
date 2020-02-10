@@ -2,19 +2,7 @@
 
 {% import "_modules/link/link.nunjucks" as link %}
 
-{% block headline %}Breaking down the money in the Maine 2nd District race{% endblock %}
-
-{% block byline %}By Jessica Piper{% endblock %}
-{% block pubdate %}
-    <time datetime="2020-02-1" pubdate>Feb. 1, 2020</time>
-{% endblock %}
 {% block content%}
-
-<p>Maine’s 2nd District set a record for the most spending in a House race in
-state history in 2018, and is likely to be competitive -- and expensive -- again
-in 2020. These charts are updated every quarter when candidates submit new data
-to the Federal Election Commission.
-</p>
 
 <section>
 <h3>How much did candidates raise through the end of 2019?</h3>
