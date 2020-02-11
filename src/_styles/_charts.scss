@@ -1,11 +1,14 @@
 .inline-chart {
     width: 32%;
     display: inline-block;
+    min-width: 250px;
+    min-height: 250px;
 }
 
 .long-chart{
   width: 95%;
   display: inline-block;
+  min-height: 350px;
 }
 
 .percent-chart{
