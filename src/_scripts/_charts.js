@@ -200,7 +200,7 @@ d3.selection.prototype.moveToFront = function() {
 
 function pacChart(el) {
 
-var margin = {top: 20, right:20, bottom:70, left:90};
+var margin = {top: 20, right:20, bottom:70, left:87};
 
 var container = d3.select(el);
 
