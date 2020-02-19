@@ -4,10 +4,13 @@
 
 {% block content%}
 
-<body color="white">
+<style>
+body {
+  max-width: 1200px;
+}
+</style>
 
-<section>
-<h1></h1>
+<p></p>
 <p class="headline-text"><b>Tracking the money in Maine's 2020 Senate race</b></p>
 <p class="byline-text">By <a href="https://bangordailynews.com/author/jpiper/">Jessica Piper</a>, BDN Staff • February 20, 2020 4:00 p.m.</p>
 <p class="byline-text">Updated February 20, 2020 4:00 p.m.</p>
@@ -36,7 +39,6 @@ Lisa Savage.
   such as independents Tiffany Bond and Max Linn, will be included once the next round of data is
   released on April 15.</i></p>
 </div>
-</section>
 
 <p class="header-text">Sources of funding:</p>
 <p class="paragraph-text">Candidates raise money from a variety of different sources. Large
@@ -59,13 +61,20 @@ self-funding.
 
 <p class="header-text">There are different kinds of PACs.</p>
 <p class="paragraph-text">Not all PACs are the same -- they represent a variety of different interests
-and groups. Broadly, PACs can be classified into four main categories. <u>Ideological
+and groups. Broadly, PACs can be classified into four main categories:</p>
+<p class="paragraph-text">-- <u>Ideological
 PACs</u> work to advance a particular issue or set of issues. PACs in this category
 include EMILY’s List, which works to elect female Democratic candidates, and
-No Labels, which aims to reduce partisanship. <u>Leadership PACs</u> are associated with
+No Labels, which aims to reduce partisanship.</p>
+<p class="paragraph-text">-- <u>Leadership PACs</u> are associated with
 a particular politician. Many members of Congress have these PACs, which they use
-to support other candidates. <u>Labor PACs</u> advance the interests of labor unions, and
-are often funded by union members. <u>Business PACs</u>, sometimes referred to as corporate
+to support other candidates. Funds transferred directly from one candidate's campaign
+committee to another are also classified in this category.
+</p>
+<p class="paragraph-text">-- <u>Labor PACs</u> advance the interests of labor unions, and
+are often funded by union members.
+</p>
+<p class="paragraph-text">-- <u>Business PACs</u>, sometimes referred to as corporate
 PACs, generally work to advance the interests of the businesses or corporate groups
 that they represent.
 </p>

@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Maine Campaign Finance</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://bl.ocks.org/palewire/raw/1035cd306a2f85b362b1a20ce315b8eb/base.css?rev=8">
     <link rel="pingback" href="https://bangordailynews.com/xmlrpc.php">
@@ -12,15 +11,6 @@
     {% block stylesheets %}{% endblock %}
 </head>
 <body>
-    <header>
-        <h1><b>{% block headline %}{% endblock %}</b></h1>
-        <div class="byline">
-            {% block byline %}{% endblock %}
-        </div>
-        <div class="pubdate">
-            {% block pubdate %}{% endblock %}
-        </div>
-    </header>
     {% block content %}{% endblock %}
     {% block scripts %}{% endblock %}
     <script src="scripts/main.js"></script>
