@@ -6,7 +6,7 @@
 
 <style>
 body {
-  max-width: 1200px;
+  max-width: 1100px;
 }
 </style>
 
@@ -101,6 +101,10 @@ var cd2_pacs = {% include '_data/cd2_pacs.json' %};
 
 <script>
 var cd2_topline = {% include '_data/cd2_topline.json' %};
+</script>
+
+<script>
+var logo = {% include '_images/bdnlogo.jpg' %};
 </script>
 
 {% endblock %}
