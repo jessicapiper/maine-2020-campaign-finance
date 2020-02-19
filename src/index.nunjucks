@@ -4,8 +4,13 @@
 
 {% block content%}
 
-<section>
-<h1></h1>
+<style>
+body {
+  max-width: 1100px;
+}
+</style>
+
+<p></p>
 <p class="headline-text"><b>Tracking the money in Maine's 2nd District race</b></p>
 <p class="byline-text">By <a href="https://bangordailynews.com/author/jpiper/">Jessica Piper</a>, BDN Staff • February 20, 2020 4:00 p.m.</p>
 <p class="byline-text">Updated February 20, 2020 4:00 p.m.</p>
@@ -29,7 +34,6 @@ so far.
   <h4 class="chart-title">Cash on hand as of Dec. 31</h4> </div>
   <p style="text-align:right"><small>Source: BDN analysis of FEC data</small></p>
 </div>
-</section>
 
 <p class="header-text">Sources of funding:</p>
 <p class="paragraph-text">Candidates raise money from a variety of different sources. Large
