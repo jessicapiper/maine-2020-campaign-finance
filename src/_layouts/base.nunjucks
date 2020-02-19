@@ -7,12 +7,13 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="https://bl.ocks.org/palewire/raw/1035cd306a2f85b362b1a20ce315b8eb/base.css?rev=8">
+    <link rel="pingback" href="https://bangordailynews.com/xmlrpc.php">
+    <meta name="description" content="Bangor Daily News campaign finance tracker. Maine politics from the Bangor Daily News.">
     {% block stylesheets %}{% endblock %}
 </head>
 <body>
-
     <header>
-        <h1>{% block headline %}{% endblock %}</h1>
+        <h1><b>{% block headline %}{% endblock %}</b></h1>
         <div class="byline">
             {% block byline %}{% endblock %}
         </div>
