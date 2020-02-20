@@ -11,7 +11,6 @@ body {
 </style>
 
 <div class="navbar">
-  <a href="https://bangordailynews.com/" class="active"><b>BANGOR DAILY NEWS</b></a>
   <a href="https://bangordailynews.com/" class="active">Home</a>
   <a href="https://bangordailynews.com/news/?ref=main-nav" class="active">News</a>
   <a href="hhttps://bangordailynews.com/politics/?ref=main-nav" class="active">Politics</a>
@@ -20,6 +19,8 @@ body {
   <a href="https://bangordailynews.com/sports/?ref=main-nav" class="active">Sports</a>
   <a href="hhttps://bangordailynews.com/opinion/?ref=main-nav" class="active">Opinion</a>
 </div>
+
+<img src = "bdnpolitics.png" class = "logo" alt="bangor daily news logo" height="70">
 
 <p></p>
 <p class="headline-text"><b>Tracking the money in Maine's 2nd District race</b></p>
