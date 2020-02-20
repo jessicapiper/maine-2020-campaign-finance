@@ -2,7 +2,7 @@ var d3 = require("d3");
 
 function totalsChart(el, fieldname) {
 
-var margin = {top: 10, right:20, bottom:90, left:60};
+var margin = {top: 10, right:20, bottom:120, left:60};
 
 var container = d3.select(el);
 
@@ -43,13 +43,16 @@ svg.append("g")
     .call(xAxis)
     .selectAll("text")
         .style("text-anchor", "end")
+        .style("font-size","14px")
         .attr("dx", "-.8em")
         .attr("dy", ".15em")
         .attr("transform", "rotate(-65)");
 
 svg.append("g")
     .attr("class", "y axis")
-    .call(yAxis);
+    .call(yAxis)
+    .selectAll("text")
+        .style("font-size","14px");
 
 var tooltip = svg.append('text')
     .attr('class', 'chart-tooltip');
@@ -102,7 +105,7 @@ totalsChart("#cash-on-hand", "cash_on_hand")
 
 function percentChart(el, fieldname) {
 
-var margin = {top: 20, right:20, bottom:90, left:60};
+var margin = {top: 20, right:20, bottom:120, left:60};
 
 var container = d3.select(el);
 
@@ -143,13 +146,16 @@ svg.append("g")
     .call(xAxis)
     .selectAll("text")
         .style("text-anchor", "end")
+        .style("font-size","14px")
         .attr("dx", "-.8em")
         .attr("dy", ".15em")
         .attr("transform", "rotate(-65)");
 
 svg.append("g")
     .attr("class", "y axis")
-    .call(yAxis);
+    .call(yAxis)
+    .selectAll("text")
+        .style("font-size","14px");
 
 var tooltip = svg.append('text')
     .attr('class', 'chart-tooltip');
@@ -200,7 +206,7 @@ d3.selection.prototype.moveToFront = function() {
 
 function pacChart(el) {
 
-var margin = {top: 20, right:20, bottom:70, left:87};
+var margin = {top: 20, right:20, bottom:70, left:120};
 
 var container = d3.select(el);
 
@@ -242,6 +248,7 @@ svg.append("g")
     .call(xAxis)
     .selectAll("text")
         .style("text-anchor", "end")
+        .style("font-size","14px")
         .attr("dx", "-.8em")
         .attr("dy", ".15em")
         .attr("transform", "rotate(-65)");
@@ -249,7 +256,9 @@ svg.append("g")
 svg.append("g")
     .attr("class", "y axis")
     .attr("transform", `translate(0,30)`)
-    .call(yAxis);
+    .call(yAxis)
+    .selectAll("text")
+        .style("font-size","14px");
 
 var tooltip = svg.append('text')
     .attr('class', 'chart-tooltip')
@@ -257,17 +266,6 @@ var tooltip = svg.append('text')
     .style("border-radius", "5px")
     .style("padding", "10px")
     .style("color", "white")
-    //.attr("width", 60)
-    //.attr("height", 20)
-    //.attr("color","#ffffff")
-    //.style("visibility","hidden")
-    //.style("background", "#000");
-
-/*(tooltip.append("rect")
-    .attr("width", 60)
-    .attr("height", 20)
-    .attr("fill", "white")
-    .style("opacity", 0.2);*/
 
 var keys = ["ideological","leadership","labor","business","other"]
 
@@ -312,7 +310,7 @@ var legend = svg.append("g")
   .attr("width",series.length * 36)
   .attr("height",40)
   .attr("font-family", "helvetica")
-  .attr("font-size", 12)
+  .attr("font-size", 14)
   //.style("margin-left", `${margin.left}px`)
   .attr("text-anchor", "left")
   .style("display", "block")
