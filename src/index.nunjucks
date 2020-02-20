@@ -12,31 +12,36 @@ body {
 
 <a href=https://bangordailynews.com/><img src = "bdnlogo.jpg" alt="bangor daily news logo"></a>
 
-<p class="headline-text"><b>Tracking the money in Maine's 2nd District race</b></p>
+<p class="headline-text"><b>Tracking the money in Maine's 2020 U.S. Senate race</b></p>
 <p class="byline-text">By <a href="https://bangordailynews.com/author/jpiper/">Jessica Piper</a>, BDN Staff • February 20, 2020 4:00 p.m.</p>
 <p class="byline-text">Updated February 20, 2020 4:00 p.m.</p>
-<p></p>
-<p class="paragraph-text">Maine’s 2nd District set a record for the
-<a href="https://bangordailynews.com/2018/11/07/politics/maines-toss-up-2nd-district-appears-headed-to-a-ranked-choice-count/">
-most spending</a> in a House race in state history in 2018, and is likely to be competitive --
- and expensive -- again in 2020. These charts are updated every quarter when we
- get new data.</p>
 
+<p></p>
+<p class="paragraph-text">The Maine Senate race is expected to be the most expensive
+in the state’s history, with one firm predicting that <a href="https://bangordailynews.com/2019/12/01/politics/a-guide-to-the-millions-pouring-into-maine-for-the-2020-us-senate-race/">
+$55 million</a> will be spent on advertising alone. We’re tracking where all
+the candidates stand on fundraising this year. These charts are updated quarterly
+when new data is submitted to the Federal Election Commission.
+</p>
 <p class="header-text">How much did candidates raise through the end of 2019?</p>
-<p class="paragraph-text">So far, incumbent Democrat Jared Golden is comfortably ahead of his Republican challengers --
- former state Sen. <a href = "https://bangordailynews.com/2019/05/23/politics/daily-brief/eric-brakey-tests-the-waters-for-a-2020-run-against-jared-golden/">
- Eric Brakey</a>, former state Rep. <a href = https://bangordailynews.com/2019/10/10/politics/former-lisbon-lawmaker-is-the-3rd-republican-to-enter-the-2020-race-in-maines-2nd-district/>
- Dale Crafts</a> and <a href = https://bangordailynews.com/2019/10/08/politics/former-lepage-spokeswoman-joins-2020-gop-primary-in-maines-2nd-district/>
- Adrienne Bennett</a>, who served as press secretary to former Gov. Paul LePage.
+<p class="paragraph-text">Sen. Susan Collins, a Republican, continues to be a
+<a href="https://bangordailynews.com/2020/01/31/politics/susan-collins-outraised-by-democrat-in-late-2019-but-had-more-than-double-the-money-left/">strong fundraiser</a>,
+while Sara Gideon is <a href = "https://bangordailynews.com/2020/01/28/politics/democrat-sara-gideon-reports-7-6-million-raised-in-2020-challenge-to-susan-collins/">
+significantly outraising</a> her opponents in the Democratic
+primary -- Betsy Sweet, Ross LaJeunesse and Bre Kidman -- and Green hopeful
+Lisa Savage.
 </p>
 <div class="charts">
   <div class="inline-chart" id="total-raised">
-  <h4 class="chart-title">Total contributions this cycle</h4> </div>
+  <h4 class="chart-title">Total contributions this cycle</h4></div>
   <div class="inline-chart" id="total-spent">
-  <h4 class="chart-title">Total spent this cycle</h4> </div>
+  <h4 class="chart-title">Total spent this cycle</h4></div>
   <div class="inline-chart" id="cash-on-hand">
-  <h4 class="chart-title">Cash on hand as of Dec. 31</h4> </div>
+  <h4 class="chart-title">Cash on hand as of Dec. 31.</h4></div>
   <p style="text-align:right"><small>Source: BDN analysis of FEC data</small></p>
+  <p class="paragraph-text" style="text-align:left"><i>Note: Candidates who declared after Dec. 31,
+  such as independents Tiffany Bond and Max Linn, will be included once the next round of data is
+  released on April 15.</i></p>
 </div>
 
 <p class="header-text">Sources of funding:</p>
@@ -45,8 +50,8 @@ contributions are classified as donations coming from individuals who have
 given at least $200 to the candidate during the election cycle. Small
 contributions are from individuals who gave less. Political action committees
 are allowed to give up to $5,000 directly to each candidate in a given election cycle.
-Percentages might not add to 100 percent because of loans, candidate
-self-funding and transfers from other committees.
+Percentages might not add to 100 percent because of loans and candidate
+self-funding.
 </p>
 <div class="charts">
   <div class="inline-chart" id="percent-small-donors">
@@ -100,6 +105,10 @@ var cd2_pacs = {% include '_data/cd2_pacs.json' %};
 
 <script>
 var cd2_topline = {% include '_data/cd2_topline.json' %};
+</script>
+
+<script>
+var logo = {% include '_images/bdnlogo.jpg' %};
 </script>
 
 {% endblock %}
