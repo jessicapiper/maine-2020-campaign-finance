@@ -10,7 +10,16 @@ body {
 }
 </style>
 
-<a href=https://bangordailynews.com/><img src = "bdnlogo3.png" alt="bangor daily news logo" width=1100></a>
+<div class="navbar">
+  <a href="https://bangordailynews.com/" class="active"><b>BANGOR DAILY NEWS</b></a>
+  <a href="https://bangordailynews.com/" class="active">Home</a>
+  <a href="https://bangordailynews.com/news/?ref=main-nav" class="active">News</a>
+  <a href="hhttps://bangordailynews.com/politics/?ref=main-nav" class="active">Politics</a>
+  <a href="https://bangordailynews.com/business/?ref=main-nav" class="active">Business</a>
+  <a href="https://bangordailynews.com/arts-and-culture/?ref=main-nav" class="active">Arts</a>
+  <a href="https://bangordailynews.com/sports/?ref=main-nav" class="active">Sports</a>
+  <a href="hhttps://bangordailynews.com/opinion/?ref=main-nav" class="active">Opinion</a>
+</div>
 
 <p></p>
 <p class="headline-text"><b>Tracking the money in Maine's 2nd District race</b></p>
