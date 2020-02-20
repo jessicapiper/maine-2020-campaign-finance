@@ -56,7 +56,7 @@ var tooltip = svg.append('text')
 
 var colors = d3.scaleLinear()
   .domain(["R","D","G"])
-  .range("red","blue","green");
+  .range("red","blue","#044019");
 
 console.log(colors)
 
@@ -75,7 +75,7 @@ svg.selectAll('.bar')
       }else if (d.party == "R") {
         return "#e60000"
       }else {
-        return "green";
+        return "#044019";
       }
     })
     .on('mouseenter', function(d) {
@@ -169,7 +169,7 @@ svg.selectAll('.bar')
       }else if (d.party == "R") {
         return "#e60000"
       }else {
-        return "green";
+        return "#044019";
       }
     })
     .on('mouseenter', function(d) {

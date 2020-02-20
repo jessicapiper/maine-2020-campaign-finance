@@ -10,8 +10,18 @@ body {
 }
 </style>
 
-<a href=https://bangordailynews.com/><img src = "bdnlogo.jpg" alt="bangor daily news logo"></a>
+<div class="navbar">
+  <a href="https://bangordailynews.com/" class="active"><b>BANGOR DAILY NEWS</b></a>
+  <a href="https://bangordailynews.com/" class="active">Home</a>
+  <a href="https://bangordailynews.com/news/?ref=main-nav" class="active">News</a>
+  <a href="hhttps://bangordailynews.com/politics/?ref=main-nav" class="active">Politics</a>
+  <a href="https://bangordailynews.com/business/?ref=main-nav" class="active">Business</a>
+  <a href="https://bangordailynews.com/arts-and-culture/?ref=main-nav" class="active">Arts</a>
+  <a href="https://bangordailynews.com/sports/?ref=main-nav" class="active">Sports</a>
+  <a href="hhttps://bangordailynews.com/opinion/?ref=main-nav" class="active">Opinion</a>
+</div>
 
+<p></p>
 <p class="headline-text"><b>Tracking the money in Maine's 2020 U.S. Senate race</b></p>
 <p class="byline-text">By <a href="https://bangordailynews.com/author/jpiper/">Jessica Piper</a>, BDN Staff • February 20, 2020 4:00 p.m.</p>
 <p class="byline-text">Updated February 20, 2020 4:00 p.m.</p>
@@ -87,6 +97,7 @@ that they represent.
   <div class="long-chart" id="all-pacs"></div>
   <p style="text-align:right"><small>Source: BDN analysis of FEC data</small></p>
 </div>
+
 {% endblock %}
 
 {% block scripts %}
