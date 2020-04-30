@@ -7,7 +7,7 @@
     "d3-format": "^1.4.3",
     "imagemin": "^7.0.1",
     "imagemin-jpegtran": "^6.0.0",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "natives": "^1.1.6",
     "normalize.css": "~5.0.0",
     "numeral": "^2.0.6"
